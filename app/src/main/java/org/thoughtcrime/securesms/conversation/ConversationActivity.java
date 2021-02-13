@@ -3194,7 +3194,7 @@ public class ConversationActivity extends PassphraseRequiredActivity
     public boolean onKey(View v, int keyCode, KeyEvent event) {
       if (event.getAction() == KeyEvent.ACTION_DOWN) {
         if (keyCode == KeyEvent.KEYCODE_ENTER) {
-          if (TextSecurePreferences.isEnterSendsEnabled(ConversationActivity.this)) {
+          if (TextSecurePreferences.isEnterSendsEnabled(ConversationActivity.this) || event.isCtrlPressed()) {
             sendButton.dispatchKeyEvent(new KeyEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_ENTER));
             sendButton.dispatchKeyEvent(new KeyEvent(KeyEvent.ACTION_UP, KeyEvent.KEYCODE_ENTER));
             return true;
