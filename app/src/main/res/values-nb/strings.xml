@@ -66,6 +66,7 @@
   <string name="AttachmentUploadJob_uploading_media">Laster opp media…</string>
   <string name="AttachmentUploadJob_compressing_video_start">Komprimerer video…</string>
   <!--BackgroundMessageRetriever-->
+  <string name="BackgroundMessageRetriever_checking_for_messages">Ser etter meldinger…</string>
   <!--BlockedUsersActivity-->
   <string name="BlockedUsersActivity__blocked_users">Blokkerte brukere</string>
   <string name="BlockedUsersActivity__add_blocked_user">Legg til blokkert bruker</string>
@@ -1182,7 +1183,7 @@
   <string name="WebRtcCallView__your_video_is_off">Din video er skrudd av</string>
   <string name="WebRtcCallView__reconnecting">Kobler til på nytt…</string>
   <string name="WebRtcCallView__joining">Blir med…</string>
-  <string name="WebRtcCallView__disconnected">Koplet fra</string>
+  <string name="WebRtcCallView__disconnected">Koblet fra</string>
   <string name="WebRtcCallView__no_one_else_is_here">Ingen andre er her</string>
   <string name="WebRtcCallView__s_is_in_this_call">%1$ser i denne samtalen</string>
   <string name="WebRtcCallView__s_and_s_are_in_this_call">%1$s og %2$s er i denne samtalen.</string>
