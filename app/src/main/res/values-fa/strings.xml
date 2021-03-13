@@ -234,6 +234,7 @@
   <string name="ConversationActivity__more_options_now_in_group_settings">امکانات بیشتر هم‌اکنون در «تنظیمات گروه»</string>
   <string name="ConversationActivity_join">پیوستن</string>
   <string name="ConversationActivity_full">پر شده</string>
+  <string name="ConversationActivity_error_sending_media">خطا در ارسال رسانه</string>
   <!--ConversationAdapter-->
   <plurals name="ConversationAdapter_n_unread_messages">
     <item quantity="one">%d پیام خوانده نشده</item>
@@ -326,7 +327,7 @@
   <!--ChooseBackupFragment-->
   <string name="ChooseBackupFragment__restore_from_backup">بازگردانی از پشتیبان؟</string>
   <string name="ChooseBackupFragment__restore_your_messages_and_media">پیام‌ها و رسانه‌های خود را از یک پشتیبان محلی بازگردانی کنید. اگر هم‌اکنون بازگردانی نکنید، بعداً قادر به انجام این کار نخواهید بود. </string>
-  <string name="ChooseBackupFragment__icon_content_description">بازگردانی از طریق نگارک پشتیبان</string>
+  <string name="ChooseBackupFragment__icon_content_description">بازگردانی از طریق آیکون پشتیبان</string>
   <string name="ChooseBackupFragment__choose_backup">پشتیبان را انتخاب کنید</string>
   <string name="ChooseBackupFragment__learn_more">بیشتر یاد بگیرید</string>
   <!--RestoreBackupFragment-->
@@ -539,8 +540,8 @@
     <item quantity="other">لغو %1$d دعوت</item>
   </plurals>
   <plurals name="PendingMembersActivity_error_revoking_invite">
-    <item quantity="one">اشکال در لغو دعوت</item>
-    <item quantity="other">اشکال در لغو دعوت‌ها</item>
+    <item quantity="one">خطا در لغو دعوت</item>
+    <item quantity="other">خطا در لغو دعوت‌ها</item>
   </plurals>
   <!--RequestingMembersFragment-->
   <string name="RequestingMembersFragment_pending_member_requests">درخواست‌‌های عضویت در حال انتظار</string>
@@ -622,7 +623,7 @@
   <string name="ManageGroupActivity_failed_to_update_the_group">به‌روزرسانی گروه ناموفق بود.</string>
   <string name="ManageGroupActivity_youre_not_a_member_of_the_group">شما عضو گروه نیستید</string>
   <string name="ManageGroupActivity_failed_to_update_the_group_please_retry_later">به‌روزرسانی گروه موفق نبود، لطفاً بعداً دوباره امتحان کنید</string>
-  <string name="ManageGroupActivity_failed_to_update_the_group_due_to_a_network_error_please_retry_later">به‌روزرسانی گروه به علت اشکال شبکه موفق نبود، لطفاً بعداً دوباره امتحان کنید</string>
+  <string name="ManageGroupActivity_failed_to_update_the_group_due_to_a_network_error_please_retry_later">به‌روزرسانی گروه به علت خطای شبکه موفق نبود، لطفاً بعداً دوباره امتحان کنید</string>
   <string name="ManageGroupActivity_edit_name_and_picture">ویرایش نام و عکس</string>
   <string name="ManageGroupActivity_legacy_group">گروه موروثی</string>
   <string name="ManageGroupActivity_legacy_group_learn_more">این یک گروه قدیمی است. قابلیت‌هایی نظیر مدیران گروه فقط در گروه‌های جدید موجود هستند.</string>
@@ -836,6 +837,11 @@
   <string name="NotificationBarManager__answer_call">پاسخ به تماس</string>
   <string name="NotificationBarManager__end_call">پایان تماس</string>
   <string name="NotificationBarManager__cancel_call">لغو تماس</string>
+  <!--NotificationsMegaphone-->
+  <string name="NotificationsMegaphone_turn_on_notifications">اعلان‌ها روشن شوند؟</string>
+  <string name="NotificationsMegaphone_never_miss_a_message">هیچوقت پیامی از مخاطب‌ها و گروه‌هایتان از دست ندهید.</string>
+  <string name="NotificationsMegaphone_turn_on">روشن</string>
+  <string name="NotificationsMegaphone_not_now">حالا نه</string>
   <!--NotificationMmsMessageRecord-->
   <string name="NotificationMmsMessageRecord_multimedia_message">پیام چندرسانه‌ای</string>
   <string name="NotificationMmsMessageRecord_downloading_mms_message">دریافت پیام چند‌رسانه‌ای…</string>
@@ -1103,7 +1109,7 @@
   </plurals>
   <!--PassphrasePromptActivity-->
   <string name="PassphrasePromptActivity_enter_passphrase">گذرواژه را وارد کنید</string>
-  <string name="PassphrasePromptActivity_watermark_content_description">نگارک سیگنال</string>
+  <string name="PassphrasePromptActivity_watermark_content_description">آیکون سیگنال</string>
   <string name="PassphrasePromptActivity_ok_button_content_description">ارسال گذرواژه</string>
   <string name="PassphrasePromptActivity_invalid_passphrase_exclamation">گذرواژه معتبر نیست!</string>
   <string name="PassphrasePromptActivity_unlock_signal">باز کردن قفل سیگنال</string>
@@ -1244,6 +1250,7 @@
   <string name="RegistrationActivity_continue">ادامه</string>
   <string name="RegistrationActivity_take_privacy_with_you_be_yourself_in_every_message">حریم خصوصی را همراه داشته باشید.\nدر هر پیام خودتان باشید.</string>
   <string name="RegistrationActivity_enter_your_phone_number_to_get_started">برای شروع شمارهٔ همراه خود را وارد کنید</string>
+  <string name="RegistrationActivity_enter_your_phone_number">شمارهٔ خود را وارد کنید</string>
   <string name="RegistrationActivity_you_will_receive_a_verification_code">شما یک کد تأیید دریافت خواهید کرد. اپراتور شما ممکن است مبلغی در ازای این کار دریافت کند.</string>
   <string name="RegistrationActivity_enter_the_code_we_sent_to_s">کدی که به %s ارسال کردیم را وارد کنید</string>
   <string name="RegistrationActivity_make_sure_your_phone_has_a_cellular_signal">مطمئن شوید تلفن شما برای دریافت پیامک یا تماس آنتن‌دهی دارد</string>
@@ -1299,7 +1306,7 @@
   <string name="SmsMessageRecord_secure_session_reset_s">%s نشست امن را بازنشانی کرد.</string>
   <string name="SmsMessageRecord_duplicate_message">پیام تکراری.</string>
   <string name="SmsMessageRecord_this_message_could_not_be_processed_because_it_was_sent_from_a_newer_version">این پیام قابل پردازش نیست چون از یک نسخهٔ جدیدتر سیگنال ارسال شده است. می‌توانید از مخاطب خود بخواهید تا این پیام را دوباره بعد از به‌روزرسانی برای شما ارسال کند.</string>
-  <string name="SmsMessageRecord_error_handling_incoming_message">خطا هنگام پردازش پیام ورودی.</string>
+  <string name="SmsMessageRecord_error_handling_incoming_message">خطا در پردازش پیام ورودی.</string>
   <!--StickerManagementActivity-->
   <string name="StickerManagementActivity_stickers">استیکرها</string>
   <!--StickerManagementAdapter-->
@@ -1972,7 +1979,7 @@
   <string name="preferences_notifications__priority">اولویت</string>
   <string name="preferences_communication__category_sealed_sender">فرستندهٔ ناشناس</string>
   <string name="preferences_communication__sealed_sender_display_indicators">نمایش نشانگرها</string>
-  <string name="preferences_communication__sealed_sender_display_indicators_description">نمایش نگارک وضعیت در حالتی که شما «جزئیات پیام» را بر روی پیام‌‌هایی که با استفاده از فرستندهٔ ناشناس تحویل داده شده بودند انتخاب می‌کنید.</string>
+  <string name="preferences_communication__sealed_sender_display_indicators_description">نمایش آیکون وضعیت هنگامی که شما «جزئیات پیام» را بر روی پیام‌‌هایی که با استفاده از فرستندهٔ ناشناس تحویل داده شده‌اند انتخاب می‌کنید.</string>
   <string name="preferences_communication__sealed_sender_allow_from_anyone">اجازه به همه</string>
   <string name="preferences_communication__sealed_sender_allow_from_anyone_description">فعال‌سازی فرستندۀ ناشناس برای پیام‌های ورودی از غیرمخاطبین و کسانی که پروفایل خود را با آن‌ها به اشتراک نگذاشته‌اید.</string>
   <string name="preferences_communication__sealed_sender_learn_more">بیشتر یاد بگیرید</string>
@@ -2214,7 +2221,7 @@
   <string name="ResearchMegaphoneDialog_no_thanks">نه ممنون</string>
   <string name="ResearchMegaphoneDialog_the_survey_is_hosted_by_alchemer_at_the_secure_domain">این نظرسنجی بوسیلهٔ Alchemer در دامنهٔ امن surveys.signalusers.org ‌میزبانی می‌شود.</string>
   <!--transport_selection_list_item-->
-  <string name="transport_selection_list_item__transport_icon">نگارک انتقال</string>
+  <string name="transport_selection_list_item__transport_icon">آیکون انتقال</string>
   <string name="ConversationListFragment_loading">در حال بارگذاری…</string>
   <string name="CallNotificationBuilder_connecting">در حال اتصال…</string>
   <string name="Permissions_permission_required">مجوز لازم است</string>
@@ -2337,6 +2344,8 @@
   <string name="GroupsLearnMore_paragraph_2">گروه‌های قدیمی نمی‌توانند به گرو‌ه‌های جدید ارتقا پیدا کنند، اما شما می‌توانید یک گروه جدید با همان اعضا ایجاد کنید در صورتی که همگی از آخرین نسخهٔ سیگنال استفاده کنند.</string>
   <string name="GroupsLearnMore_paragraph_3">سیگنال در آینده راهی برای ارتقا گرو‌ه‌های قدیمی ارائه خواهد داد.</string>
   <!--GroupLinkBottomSheetDialogFragment-->
+  <string name="GroupLinkBottomSheet_share_hint_requiring_approval">هرکسی با این پیوند می‌تواند نام و عکس گروه را ببیند و درخواست پیوستن بدهد. فقط با کسانی که اعتماد دارید به اشتراک بگذارید.</string>
+  <string name="GroupLinkBottomSheet_share_hint_not_requiring_approval">هرکسی با این پیوند می‌تواند نام و عکس گروه را ببیند و به گروه بپیوندد. فقط با کسانی که اعتماد دارید به اشتراک بگذارید.</string>
   <string name="GroupLinkBottomSheet_share_via_signal">اشتراک‌گذاری از طریق سیگنال</string>
   <string name="GroupLinkBottomSheet_copy">کپی</string>
   <string name="GroupLinkBottomSheet_qr_code">کد QR</string>
@@ -2449,7 +2458,7 @@
   <string name="WallpaperCropActivity__pinch_to_zoom_drag_to_adjust">دو انگشت برای بزرگ‌نمایی و کشیدن برای جابه‌جایی و تنظیم</string>
   <string name="WallpaperCropActivity__set_wallpaper_for_all_chats">تنظیم کاغذدیواری برای تمامی گفتگوها.</string>
   <string name="WallpaperCropActivity__set_wallpaper_for_s">تنظیم کاغذدیواری برای %s.</string>
-  <string name="WallpaperCropActivity__error_setting_wallpaper">اشکال در تنظیم کاغذدیواری.</string>
+  <string name="WallpaperCropActivity__error_setting_wallpaper">خطا در تنظیم کاغذدیواری.</string>
   <string name="WallpaperCropActivity__blur_photo">مات کردن عکس</string>
   <!--EOF-->
 </resources>

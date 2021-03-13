@@ -233,6 +233,7 @@
   <string name="ConversationActivity__more_options_now_in_group_settings">Lebih banyak lagi opsi dalam \"Pengaturan grup\" sekarang</string>
   <string name="ConversationActivity_join">Bergabung</string>
   <string name="ConversationActivity_full">Penuh</string>
+  <string name="ConversationActivity_error_sending_media">Gagal mengirim media</string>
   <!--ConversationAdapter-->
   <plurals name="ConversationAdapter_n_unread_messages">
     <item quantity="other">%d pesan belum dibaca</item>
@@ -304,7 +305,7 @@
   <string name="ConversationTitleView_verified">Terverifikasi</string>
   <string name="ConversationTitleView_you">Anda</string>
   <!--CreateGroupActivity-->
-  <string name="CreateGroupActivity_some_contacts_cannot_be_in_legacy_groups">Beberapa kontak tidak dapat berada di grup warisan.</string>
+  <string name="CreateGroupActivity_some_contacts_cannot_be_in_legacy_groups">Beberapa kontak tidak dapat berada di grup lama.</string>
   <!--CreateProfileActivity-->
   <string name="CreateProfileActivity__profile">Profil</string>
   <string name="CreateProfileActivity_error_setting_profile_photo">Gagal mengatur foto profil</string>
@@ -408,7 +409,7 @@
   <string name="AddToGroupActivity_s_added_to_s">\"%1$s\" ditambahkan ke \"%2$s\".</string>
   <string name="AddToGroupActivity_add_to_group">Tambahkan ke grup</string>
   <string name="AddToGroupActivity_add_to_groups">Tambahkan ke grup</string>
-  <string name="AddToGroupActivity_this_person_cant_be_added_to_legacy_groups">Pengguna ini tidak dapat ditambahkan ke grup warisan.</string>
+  <string name="AddToGroupActivity_this_person_cant_be_added_to_legacy_groups">Pengguna ini tidak dapat ditambahkan ke grup lama.</string>
   <string name="AddToGroupActivity_add">Tambahkan</string>
   <!--ChooseNewAdminActivity-->
   <string name="ChooseNewAdminActivity_choose_new_admin">Pilih admin baru</string>
@@ -436,7 +437,7 @@
     <item quantity="other">Anggota ini harus menerima undangan bergabung ke grup ini lagi dan tidak akan menerima pesan grup sampai mereka menerimanya:</item>
   </plurals>
   <plurals name="GroupsV1MigrationLearnMore_these_members_were_removed_from_the_group">
-    <item quantity="other">Anggota ini harus telah dikeluarkan dari grup dan tidak dapat bergabung kembali sampai mereka melakukan pembaruan:</item>
+    <item quantity="other">Anggota ini telah dikeluarkan dari grup dan tidak dapat bergabung kembali sampai mereka melakukan pembaruan:</item>
   </plurals>
   <!--GroupsV1MigrationInitiationBottomSheetDialogFragment-->
   <string name="GroupsV1MigrationInitiation_upgrade_to_new_group">Perbarui ke Grup Baru</string>
@@ -523,7 +524,7 @@
   <string name="RequestingMembersFragment_denied_s">Ditolak \"%1$s\"</string>
   <!--AddMembersActivity-->
   <string name="AddMembersActivity__done">Selesai</string>
-  <string name="AddMembersActivity__this_person_cant_be_added_to_legacy_groups">Pengguna ini tidak dapat ditambahkan ke grup warisan.</string>
+  <string name="AddMembersActivity__this_person_cant_be_added_to_legacy_groups">Pengguna ini tidak dapat ditambahkan ke grup lama.</string>
   <plurals name="AddMembersActivity__add_d_members_to_s">
     <item quantity="other">Tambahkan %3$d anggota ke \"%2$s\"?</item>
   </plurals>
@@ -545,15 +546,15 @@
   <string name="AddGroupDetailsFragment__sms_contact">Kontak pesan singkat</string>
   <string name="AddGroupDetailsFragment__remove_s_from_this_group">Keluarkan %1$s dari grup ini?</string>
   <plurals name="AddGroupDetailsFragment__d_members_do_not_support_new_groups">
-    <item quantity="other">%d anggota tidak mendukung Grup Baru, sehingga grup ini akan menjadi Grup Warisan.</item>
+    <item quantity="other">%d anggota tidak mendukung Grup Baru, sehingga grup ini akan menjadi Grup Lama.</item>
   </plurals>
   <plurals name="AddGroupDetailsFragment__d_members_do_not_support_new_groups_so_this_group_cannot_be_created">
     <item quantity="other">%d anggota tidak mendukung Grup Baru, sehingga grup ini tidak dapat dibuat.</item>
   </plurals>
   <!--NonGv2MemberDialog-->
-  <string name="NonGv2MemberDialog_single_users_are_non_gv2_capable">Sebuah Grup Warisan dibuat karena \"%1$s\" menggunakan versi Signal yang lama. Anda dapat membuat Grup Gaya Baru dengan mereka setelah mereka memperbarui Signal, atau mengeluarkannya sebelum membuat grup.</string>
+  <string name="NonGv2MemberDialog_single_users_are_non_gv2_capable">Sebuah Grup Lama dibuat karena \"%1$s\" menggunakan versi Signal yang lama. Anda dapat membuat Grup Gaya Baru dengan mereka setelah mereka memperbarui Signal, atau mengeluarkannya sebelum membuat grup.</string>
   <plurals name="NonGv2MemberDialog_d_users_are_non_gv2_capable">
-    <item quantity="other">Sebuah Grup Warisan dibuat karena %1$d menggunakan versi Signal yang lama. Anda dapat membuat Grup Gaya Baru dengan mereka setelah mereka memperbarui Signal, atau mengeluarkannya sebelum membuat grup.</item>
+    <item quantity="other">Sebuah Grup Lama dibuat karena %1$d anggota menggunakan versi Signal yang lama. Anda dapat membuat Grup Gaya Baru dengan mereka setelah mereka memperbarui Signal, atau mengeluarkannya sebelum membuat grup.</item>
   </plurals>
   <string name="NonGv2MemberDialog_single_users_are_non_gv2_capable_forced_migration">Grup ini tidak dapat dibuat karena \"%1$s\" menggunakan versi Signal yang lama. Anda harus mengeluarkan mereka sebelum membuat grup.</string>
   <plurals name="NonGv2MemberDialog_d_users_are_non_gv2_capable_forced_migration">
@@ -591,9 +592,9 @@
   <string name="ManageGroupActivity_failed_to_update_the_group_please_retry_later">Gagal memperbarui grup mohon coba lagi nanti</string>
   <string name="ManageGroupActivity_failed_to_update_the_group_due_to_a_network_error_please_retry_later">Gagal memperbarui grup karena galat jaringan, mohon coba lagi nanti</string>
   <string name="ManageGroupActivity_edit_name_and_picture">Sunting nama dan gambar</string>
-  <string name="ManageGroupActivity_legacy_group">Grup Warisan</string>
-  <string name="ManageGroupActivity_legacy_group_learn_more">Ini adalah Grup Warisan. Fitur-fitur seperti admin grup hana tersedia untuk Grup Baru.</string>
-  <string name="ManageGroupActivity_legacy_group_upgrade">Ini Grup Warisan. Untuk mengakses fitur-firue baru seperti @mention dan admin,</string>
+  <string name="ManageGroupActivity_legacy_group">Grup Lama</string>
+  <string name="ManageGroupActivity_legacy_group_learn_more">Ini adalah Grup Lama. Fitur-fitur seperti admin grup hanya tersedia untuk Grup Baru.</string>
+  <string name="ManageGroupActivity_legacy_group_upgrade">Ini adalah Grup Lama. Untuk mengakses fitur-fitur baru seperti @mention dan admin,</string>
   <string name="ManageGroupActivity_legacy_group_too_large">Grup lama ini tidak bisa ditingkatkan menjadi grup yang baru karena terlalu besar. Ukuran maksimum grup adalah %1$d.</string>
   <string name="ManageGroupActivity_upgrade_this_group">perbarui grup ini.</string>
   <string name="ManageGroupActivity_this_is_an_insecure_mms_group">Ini adalah Grup MMS yang tidak aman. Untuk mengobrol secara privat, undang kontak Anda ke Signal.</string>
@@ -793,6 +794,11 @@
   <string name="NotificationBarManager__answer_call">Terima panggilan</string>
   <string name="NotificationBarManager__end_call">Akhiri panggilan</string>
   <string name="NotificationBarManager__cancel_call">Batalkan panggilan</string>
+  <!--NotificationsMegaphone-->
+  <string name="NotificationsMegaphone_turn_on_notifications">Nyalakan Pemberitahuan?</string>
+  <string name="NotificationsMegaphone_never_miss_a_message">Jangan pernah lewatkan pesan dari kontak dan grup Anda.</string>
+  <string name="NotificationsMegaphone_turn_on">Nyalakan</string>
+  <string name="NotificationsMegaphone_not_now">Nanti saja</string>
   <!--NotificationMmsMessageRecord-->
   <string name="NotificationMmsMessageRecord_multimedia_message">Pesan multimedia</string>
   <string name="NotificationMmsMessageRecord_downloading_mms_message">Mengunduh pesan MMS.</string>
@@ -1184,6 +1190,7 @@ isikan (%s) tidak valid.
   <string name="RegistrationActivity_continue">Lanjutkan</string>
   <string name="RegistrationActivity_take_privacy_with_you_be_yourself_in_every_message">Jaga privasimu.\nJadilah dirimu sendiri pada setiap pesan.</string>
   <string name="RegistrationActivity_enter_your_phone_number_to_get_started">Masukkan nomor telepon untuk memulai</string>
+  <string name="RegistrationActivity_enter_your_phone_number">Masukkan nomor telepon Anda</string>
   <string name="RegistrationActivity_you_will_receive_a_verification_code">Anda akan mendapakan kode verifikasi. Tarif operator mungkin berlaku.</string>
   <string name="RegistrationActivity_enter_the_code_we_sent_to_s">Masukkan kode yang kami kirimkan ke %s</string>
   <string name="RegistrationActivity_make_sure_your_phone_has_a_cellular_signal">Pastikan ponsel Anda dapat menerima SMS atau panggilan</string>
@@ -1268,7 +1275,7 @@ Menerima pesan pertukaran kunci untuk versi protokol yang tidak valid.
   <string name="SubmitDebugLogActivity_copy_this_url_and_add_it_to_your_issue">Salin URL ini dan kirimkan ke email support <b>%1$s</b></string>
   <string name="SubmitDebugLogActivity_share">Bagikan</string>
   <!--SupportEmailUtil-->
-  <string name="SupportEmailUtil_filter">Filer:</string>
+  <string name="SupportEmailUtil_filter">Filter:</string>
   <string name="SupportEmailUtil_device_info">Informasi perangkat:</string>
   <string name="SupportEmailUtil_android_version">Versi Android:</string>
   <string name="SupportEmailUtil_signal_version">Versi Signal:</string>
@@ -1450,6 +1457,7 @@ Menerima pesan pertukaran kunci untuk versi protokol yang tidak valid.
   <string name="WebRtcCallScreen__answer_without_video">Jawab tanpa video</string>
   <!--WebRtcAudioOutputToggle-->
   <string name="WebRtcAudioOutputToggle__audio_output">Keluaran audio</string>
+  <string name="WebRtcAudioOutputToggle__phone_earpiece">Lubang suara ponsel</string>
   <string name="WebRtcAudioOutputToggle__speaker">Pengeras Suara</string>
   <string name="WebRtcAudioOutputToggle__bluetooth">Bluetooth</string>
   <string name="WebRtcCallControls_answer_call_description">Terima panggilan</string>
@@ -1921,6 +1929,7 @@ Menerima pesan pertukaran kunci untuk versi protokol yang tidak valid.
   <string name="preferences_success">Sukses</string>
   <string name="preferences_failed_to_connect">Gagal menyambungkan</string>
   <string name="preferences_enter_proxy_address">Masukkan alamat proksi</string>
+  <string name="configurable_single_select__customize_option">Sesuaikan opsi</string>
   <!--Internal only preferences-->
   <!--****************************************-->
   <!--menus-->
@@ -1984,6 +1993,7 @@ Menerima pesan pertukaran kunci untuk versi protokol yang tidak valid.
   <string name="conversation__menu_view_all_media">Semua media</string>
   <string name="conversation__menu_conversation_settings">Pengaturan percakapan</string>
   <string name="conversation__menu_add_shortcut">Tambahkan ke layar utama</string>
+  <string name="conversation__menu_create_bubble">Buat gelembung</string>
   <!--conversation_popup-->
   <string name="conversation_popup__menu_expand_popup">Lebarkan jendela tampilan</string>
   <!--conversation_callable_insecure-->
@@ -2250,11 +2260,14 @@ Menerima pesan pertukaran kunci untuk versi protokol yang tidak valid.
   <string name="GroupRecipientListItem_deny_description">Tolak</string>
   <!--GroupsLearnMoreBottomSheetDialogFragment-->
   <string name="GroupsLearnMore_legacy_vs_new_groups">Lawas vs. Grup Baru</string>
-  <string name="GroupsLearnMore_what_are_legacy_groups">Apakah Grup Warisan itu?</string>
-  <string name="GroupsLearnMore_paragraph_1">Grup Warisan adalah grup yang tidak cocok dengan fitur-fitur Grup Baru seperti admin dan pembaruan grup yang lebih deskriptif.</string>
+  <string name="GroupsLearnMore_what_are_legacy_groups">Apakah Grup Lama itu?</string>
+  <string name="GroupsLearnMore_paragraph_1">Grup Lama adalah grup yang tidak cocok dengan fitur-fitur Grup Baru seperti admin dan pembaruan grup yang lebih deskriptif.</string>
   <string name="GroupsLearnMore_can_i_upgrade_a_legacy_group">Bisakah Saya tingkatkan sebuah Grup Lawas?</string>
+  <string name="GroupsLearnMore_paragraph_2">Grup lama belum dapat diperbarui ke Grup Baru, namun Anda dapat membuat Grup Baru dengan anggota yang sama jika mereka menggunakan versi Signal terakhir.</string>
   <string name="GroupsLearnMore_paragraph_3">Signal akan menawarkan cara untuk meningkatkan grup versi lawas di masa mendatang.</string>
   <!--GroupLinkBottomSheetDialogFragment-->
+  <string name="GroupLinkBottomSheet_share_hint_requiring_approval">Siapapun dengan tautan ini dapat melihat nama dan foto grup ini dan dapat meminta untuk bergabung. Bagikan dengan orang yang Anda percaya.</string>
+  <string name="GroupLinkBottomSheet_share_hint_not_requiring_approval">Siapapun dengan tautan ini dapat melihat nama dan foto grup ini dan dapat bergabung dalam grup. Bagikan dengan orang yang Anda percaya.</string>
   <string name="GroupLinkBottomSheet_share_via_signal">Bagikan melalui Signal</string>
   <string name="GroupLinkBottomSheet_copy">Salin</string>
   <string name="GroupLinkBottomSheet_qr_code">Kode QR</string>
@@ -2273,6 +2286,8 @@ Menerima pesan pertukaran kunci untuk versi protokol yang tidak valid.
   <!--ReviewCardDialogFragment-->
   <string name="ReviewCardDialogFragment__review_members">Tinjau Anggota</string>
   <string name="ReviewCardDialogFragment__review_request">Tinjau Permintaan</string>
+  <string name="ReviewCardDialogFragment__d_group_members_have_the_same_name">%1$danggota grup memiliki nama yang sama, tinjau anggota-anggota di bawah dan pilih tindakan.</string>
+  <string name="ReviewCardDialogFragment__if_youre_not_sure">Jika anda tidak yakin dari mana permintaannya berasal, tinjau kontak-kontak dibawah dan ambil tindakan.</string>
   <string name="ReviewCardDialogFragment__no_other_groups_in_common">Tidak ada grup lain yang sama.</string>
   <string name="ReviewCardDialogFragment__no_groups_in_common">Tidak ada grup yang sama.</string>
   <plurals name="ReviewCardDialogFragment__d_other_groups_in_common">
@@ -2312,6 +2327,7 @@ Menerima pesan pertukaran kunci untuk versi protokol yang tidak valid.
   <string name="DeleteAccountFragment__delete_your_account_info_and_profile_photo">Menghapus info akun dan foto profil Anda</string>
   <string name="DeleteAccountFragment__delete_all_your_messages">Hapus semua pesan anda</string>
   <string name="DeleteAccountFragment__no_country_code">Tidak ada kode negara yang ditentukan</string>
+  <string name="DeleteAccountFragment__no_number">Tidak ada nomor ditentukan</string>
   <string name="DeleteAccountFragment__the_phone_number">Nomor telepon yang kamu masukan tidak cocok dengan akun manapun.</string>
   <string name="DeleteAccountFragment__are_you_sure">Apakah kamu yakin ingin menghapus akun Anda?</string>
   <string name="DeleteAccountFragment__this_will_delete_your_signal_account">Ini akan menghapus akun Signal Anda dan mereset aplikasi. Aplikasi akan tertutup setelah proses selesai.</string>
@@ -2325,7 +2341,11 @@ Menerima pesan pertukaran kunci untuk versi protokol yang tidak valid.
   <!--ShareActivity-->
   <string name="ShareActivity__share">Bagikan</string>
   <string name="ShareActivity__send">Kirim</string>
+  <string name="ShareActivity__s_comma">%1$s,</string>
+  <string name="ShareActivity__sharing_to_multiple_chats_is">Berbagi ke beberapa percakapan hanya didukung untuk pesan Signal.</string>
   <!--MultiShareDialogs-->
+  <string name="MultiShareDialogs__failed_to_send_to_some_users">Gagal mengirim ke beberapa pengguna</string>
+  <string name="MultiShareDialogs__you_can_only_share_with_up_to">Anda hanya dapat berbagi dengan maksimal %1$d percakapan</string>
   <!--ShareInterstitialActivity-->
   <string name="ShareInterstitialActivity__forward_message">Teruskan pesan</string>
   <!--ChatWallpaperActivity-->
@@ -2338,10 +2358,15 @@ Menerima pesan pertukaran kunci untuk versi protokol yang tidak valid.
   <string name="ChatWallpaperFragment__clear_wallpaper_this_will_not">Hapus gambar latar? Anda akan menghapus gambar latar semua percakapan.</string>
   <string name="ChatWallpaperFragment__reset_all_wallpapers">Kembalikan semua gambar latar.</string>
   <string name="ChatWallpaperFragment__reset_all_wallpapers_including_custom">Kembalikan semua gambar latar, termasuk gambar untuk percakapan?</string>
+  <string name="ChatWallpaperFragment__contact_name">Nama kontak</string>
   <string name="ChatWallpaperFragment__reset">Atur ulang</string>
+  <string name="ChatWallpaperFragment__clear">Bersihkan</string>
   <string name="ChatWallpaperFragment__wallpaper_preview_description">Pratinjau gambar latar</string>
   <!--ChatWallpaperSelectionFragment-->
+  <string name="ChatWallpaperSelectionFragment__choose_from_photos">Pilih dari galeri</string>
+  <string name="ChatWallpaperSelectionFragment__presets">Preset</string>
   <!--ChatWallpaperPreviewActivity-->
+  <string name="ChatWallpaperPreviewActivity__preview">Pratinjau</string>
   <string name="ChatWallpaperPreviewActivity__set_wallpaper">Atur gambar latar</string>
   <string name="ChatWallpaperPreviewActivity__swipe_to_preview_more_wallpapers">Usap untuk lihat lebih banyak</string>
   <string name="ChatWallpaperPreviewActivity__set_wallpaper_for_all_chats">Atur gambar latar untuk semua percakapan</string>
@@ -2350,8 +2375,10 @@ Menerima pesan pertukaran kunci untuk versi protokol yang tidak valid.
   <!--WallpaperImageSelectionActivity-->
   <string name="WallpaperImageSelectionActivity__choose_wallpaper_image">Pilih gambar latar</string>
   <!--WallpaperCropActivity-->
+  <string name="WallpaperCropActivity__pinch_to_zoom_drag_to_adjust">Cubit untuk memperbesar, geser untuk menyesuaikan.</string>
   <string name="WallpaperCropActivity__set_wallpaper_for_all_chats">Atur gambar latar semua percakapan.</string>
   <string name="WallpaperCropActivity__set_wallpaper_for_s">Atur gambar latar untuk %s.</string>
   <string name="WallpaperCropActivity__error_setting_wallpaper">Gagal mengatur gambar latar.</string>
+  <string name="WallpaperCropActivity__blur_photo">Buramkan foto</string>
   <!--EOF-->
 </resources>

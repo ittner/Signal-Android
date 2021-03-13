@@ -35,7 +35,7 @@
   <string name="ApplicationPreferencesActivity_appearance_summary">테마 %1$s, 언어 %2$s</string>
   <string name="ApplicationPreferencesActivity_pins_are_required_for_registration_lock">등록 잠금을 위해 PIN이 필요합니다. PIN을 비활성화하려면 먼저 등록 잠금을 비활성화하세요.</string>
   <string name="ApplicationPreferencesActivity_pin_created">PIN이 생성되었습니다.</string>
-  <string name="ApplicationPreferencesActivity_pin_disabled">PIN 사용이 중지되었습니다.</string>
+  <string name="ApplicationPreferencesActivity_pin_disabled">PIN 사용이 비활성화 되었습니다.</string>
   <string name="ApplicationPreferencesActivity_hide">숨기기</string>
   <string name="ApplicationPreferencesActivity_hide_reminder">리마인더를 숨기시겠습니까?</string>
   <!--AppProtectionPreferenceFragment-->
@@ -118,7 +118,7 @@
   <string name="ClearProfileActivity_remove_profile_photo">프로필 사진을 삭제하시겠습니까?</string>
   <string name="ClearProfileActivity_remove_group_photo">그룹 사진을 지우시겠습니까?</string>
   <!--ClientDeprecatedActivity-->
-  <string name="ClientDeprecatedActivity_update_signal">시그널 업데이트하기</string>
+  <string name="ClientDeprecatedActivity_update_signal">시그널 최신 버전으로 업데이트</string>
   <string name="ClientDeprecatedActivity_this_version_of_the_app_is_no_longer_supported">이 버전의 앱은 더 이상 지원되지 않습니다. 메시지를 주고받을려면, 가장 최근 버전으로 업데이트해주세요</string>
   <string name="ClientDeprecatedActivity_update">업데이트</string>
   <string name="ClientDeprecatedActivity_dont_update">업데이트하지 않음</string>
@@ -793,6 +793,11 @@
   <string name="NotificationBarManager__answer_call">전화 수락</string>
   <string name="NotificationBarManager__end_call">전화 종료</string>
   <string name="NotificationBarManager__cancel_call">전화 취소</string>
+  <!--NotificationsMegaphone-->
+  <string name="NotificationsMegaphone_turn_on_notifications">알림을 켜시겠습니까?</string>
+  <string name="NotificationsMegaphone_never_miss_a_message">내 연락처와 그룹의 메시지를 놓치지 마세요.</string>
+  <string name="NotificationsMegaphone_turn_on">켜기</string>
+  <string name="NotificationsMegaphone_not_now">나중에</string>
   <!--NotificationMmsMessageRecord-->
   <string name="NotificationMmsMessageRecord_multimedia_message">멀티미디어 메시지</string>
   <string name="NotificationMmsMessageRecord_downloading_mms_message">MMS 메시지 다운로드 중</string>
@@ -1184,6 +1189,7 @@
   <string name="RegistrationActivity_continue">확인</string>
   <string name="RegistrationActivity_take_privacy_with_you_be_yourself_in_every_message">내 개인 정보는 내 손에서만.\n안전하게 메시지를 보내세요.</string>
   <string name="RegistrationActivity_enter_your_phone_number_to_get_started">시작하려면 휴대 전화 번호를 입력하세요.</string>
+  <string name="RegistrationActivity_enter_your_phone_number">전화번호를 입력하세요.</string>
   <string name="RegistrationActivity_you_will_receive_a_verification_code">인증 코드를 보내드립니다. 통신사 요금이 적용될 수 있습니다.</string>
   <string name="RegistrationActivity_enter_the_code_we_sent_to_s">%s 번호로 보낸 코드를 입력해 주세요.</string>
   <string name="RegistrationActivity_make_sure_your_phone_has_a_cellular_signal">SMS 또는 전화를 수신하려면 휴대전화에서 데이터 네트워크가 켜져 있어야 합니다.</string>

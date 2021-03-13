@@ -597,7 +597,7 @@
   <string name="ManageGroupActivity_legacy_group_too_large">Nhóm Cũ này không thể được nâng cấp thành Nhóm Mới vì nhóm quá lớn. Kích cỡ nhóm tối đa là %1$d.</string>
   <string name="ManageGroupActivity_upgrade_this_group">nâng cấp nhóm này.</string>
   <string name="ManageGroupActivity_this_is_an_insecure_mms_group">Đây là một Nhóm MMS không bảo mật. Để nhắn tin bảo mật, mời các liên hệ của bạn vào Signal.</string>
-  <string name="ManageGroupActivity_invite_now">Mời ngay bây giờ</string>
+  <string name="ManageGroupActivity_invite_now">Mời ngay</string>
   <!--GroupMentionSettingDialog-->
   <string name="GroupMentionSettingDialog_notify_me_for_mentions">Thông báo khi tôi được nhắc tên</string>
   <string name="GroupMentionSettingDialog_receive_notifications_when_youre_mentioned_in_muted_chats">Nhận thông báo khi bạn được nhắc tên trong cuộc trò chuyện đã im lặng?</string>
@@ -630,7 +630,7 @@
   <string name="ManageRecipientActivity_see_all">Xem tất cả</string>
   <string name="ManageRecipientActivity_no_groups_in_common">Không có nhóm chung</string>
   <plurals name="ManageRecipientActivity_d_groups_in_common">
-    <item quantity="other">Có chung %d nhóm</item>
+    <item quantity="other">Có %d nhóm chung</item>
   </plurals>
   <string name="ManageRecipientActivity_message_description">Tin nhắn</string>
   <string name="ManageRecipientActivity_voice_call_description">Gọi thoại</string>
@@ -793,6 +793,11 @@
   <string name="NotificationBarManager__answer_call">Trả lời cuộc gọi</string>
   <string name="NotificationBarManager__end_call">Kết thúc cuộc gọi.</string>
   <string name="NotificationBarManager__cancel_call">Huỷ cuộc gọi</string>
+  <!--NotificationsMegaphone-->
+  <string name="NotificationsMegaphone_turn_on_notifications">Bận lên Thông báo?</string>
+  <string name="NotificationsMegaphone_never_miss_a_message">Không bao giờ bỏ lỡ tin nhắn từ liên hệ và nhóm của bạn.</string>
+  <string name="NotificationsMegaphone_turn_on">Bật</string>
+  <string name="NotificationsMegaphone_not_now">Để sau</string>
   <!--NotificationMmsMessageRecord-->
   <string name="NotificationMmsMessageRecord_multimedia_message">Tin nhắn đa phương tiện</string>
   <string name="NotificationMmsMessageRecord_downloading_mms_message">Đang tải xuống tin nhắn MMS</string>
@@ -914,19 +919,19 @@
   <string name="MessageRecord_s_changed_the_group_avatar">%1$s đã đổi ảnh nhóm.</string>
   <string name="MessageRecord_the_group_group_avatar_has_been_changed">Ảnh nhóm đã được thay đổi.</string>
   <!--GV2 attribute access level change-->
-  <string name="MessageRecord_you_changed_who_can_edit_group_info_to_s">Bạn đã đổi quyền sửa thông tin nhóm thành \"%1$s\".</string>
-  <string name="MessageRecord_s_changed_who_can_edit_group_info_to_s">%1$s đã đổi quyền sửa thông tin nhóm thành \"%2$s\".</string>
-  <string name="MessageRecord_who_can_edit_group_info_has_been_changed_to_s">Quyền thay đổi thông tin nhóm đã được sửa thành \"%1$s\".</string>
+  <string name="MessageRecord_you_changed_who_can_edit_group_info_to_s">Bạn đã đổi những người có quyền sửa thông tin nhóm thành \"%1$s\".</string>
+  <string name="MessageRecord_s_changed_who_can_edit_group_info_to_s">%1$s đã đổi những người có quyền sửa thông tin nhóm thành \"%2$s\".</string>
+  <string name="MessageRecord_who_can_edit_group_info_has_been_changed_to_s">Những người có quyền thay đổi thông tin nhóm đã được sửa thành \"%1$s\".</string>
   <!--GV2 membership access level change-->
-  <string name="MessageRecord_you_changed_who_can_edit_group_membership_to_s">Bạn đã đổi quyển quản lí thành viên thành \"%1$s\".</string>
-  <string name="MessageRecord_s_changed_who_can_edit_group_membership_to_s">%1$s đã đổi quyền quản lí thành viên thành \"%2$s\".</string>
-  <string name="MessageRecord_who_can_edit_group_membership_has_been_changed_to_s">Quyền thay đổi thành viên nhóm đã được sửa thành \"%1$s\".</string>
+  <string name="MessageRecord_you_changed_who_can_edit_group_membership_to_s">Bạn đã đổi những người có quyền quản lí thành viên thành \"%1$s\".</string>
+  <string name="MessageRecord_s_changed_who_can_edit_group_membership_to_s">%1$s đã đổi những người có quyền quản lí thành viên thành \"%2$s\".</string>
+  <string name="MessageRecord_who_can_edit_group_membership_has_been_changed_to_s">Những người có quyền quản lí thành viên đã được sửa thành \"%1$s\".</string>
   <!--GV2 group link invite access level change-->
-  <string name="MessageRecord_you_turned_on_the_group_link_with_admin_approval_off">Bạn đã bật đường dẫn nhóm với cài đặt quản trị viên xét duyệt Tắt. </string>
-  <string name="MessageRecord_you_turned_on_the_group_link_with_admin_approval_on">Bạn đã bật đường dẫn nhóm với cài đặt quản trị viên xét duyệt Bật.</string>
+  <string name="MessageRecord_you_turned_on_the_group_link_with_admin_approval_off">Bạn đã bật đường dẫn nhóm không yêu cầu quản trị viên xét duyệt.</string>
+  <string name="MessageRecord_you_turned_on_the_group_link_with_admin_approval_on">Bạn đã bật đường dẫn nhóm bắt buộc quản trị viên xét duyệt.</string>
   <string name="MessageRecord_you_turned_off_the_group_link">Bạn đã tắt đường dẫn nhóm.</string>
-  <string name="MessageRecord_s_turned_on_the_group_link_with_admin_approval_off">%1$s đã bật đường dẫn nhóm với cài đặt quản trị viên xét duyệt Tắt. </string>
-  <string name="MessageRecord_s_turned_on_the_group_link_with_admin_approval_on">%1$s đã bật đường dẫn nhóm với cài đặt quản trị viên xét duyệt Bật.</string>
+  <string name="MessageRecord_s_turned_on_the_group_link_with_admin_approval_off">%1$s đã bật đường dẫn nhóm không yêu cầu quản trị viên xét duyệt</string>
+  <string name="MessageRecord_s_turned_on_the_group_link_with_admin_approval_on">%1$s đã bật đường dẫn nhóm bắt buộc quản trị viên xét duyệt</string>
   <string name="MessageRecord_s_turned_off_the_group_link">%1$s đã tắt đường dẫn nhóm.</string>
   <string name="MessageRecord_the_group_link_has_been_turned_on_with_admin_approval_off">Đường dẫn nhóm đã được bật với cài đặt quản trị viên xét duyệt ở trạng thái Tắt.</string>
   <string name="MessageRecord_the_group_link_has_been_turned_on_with_admin_approval_on">Đường dẫn nhóm đã được bật với cài đặt quản trị viên xét duyệt ở trạng thái Bật</string>
@@ -1180,6 +1185,7 @@ mã quốc gia bạn</string>
   <string name="RegistrationActivity_continue">Tiếp tục</string>
   <string name="RegistrationActivity_take_privacy_with_you_be_yourself_in_every_message">Mang quyền riêng tư luôn bên bạn.\nHãy là chính mình trong từng tin nhắn.</string>
   <string name="RegistrationActivity_enter_your_phone_number_to_get_started">Điền số điện thoại của bạn để bắt đầu</string>
+  <string name="RegistrationActivity_enter_your_phone_number">Nhập số điện thoại của bạn</string>
   <string name="RegistrationActivity_you_will_receive_a_verification_code">Bạn sẽ nhận tin nhắn chứa mã xác minh. Có thể mất phí nhà mạng.</string>
   <string name="RegistrationActivity_enter_the_code_we_sent_to_s">Điền mã xác minh được gửi đến %s</string>
   <string name="RegistrationActivity_make_sure_your_phone_has_a_cellular_signal">Đảm bảo là điện thoại của bạn có tín hiệu di động để nhận tin nhắn SMS hoặc cuộc gọi</string>
@@ -2336,24 +2342,24 @@ Nhận thông tin trao đổi mã khóa về phiên bản giao thức không h�
   <!--ChatWallpaperActivity-->
   <string name="ChatWallpaperActivity__chat_wallpaper">Ảnh nền cuộc trò chuyện</string>
   <!--ChatWallpaperFragment-->
-  <string name="ChatWallpaperFragment__set_wallpaper">Cài ảnh nền</string>
+  <string name="ChatWallpaperFragment__set_wallpaper">Chọn ảnh nền</string>
   <string name="ChatWallpaperFragment__dark_theme_dims_wallpaper">Chế độ tối làm tối ảnh nền</string>
   <string name="ChatWallpaperFragment__clear_wallpaper">Xoá ảnh nền</string>
-  <string name="ChatWallpaperFragment__clear_wallpaper_for_this_chat">Xoá ảnh nền cho cuộc trò chuyện?</string>
-  <string name="ChatWallpaperFragment__clear_wallpaper_this_will_not">Xoá ảnh nền? Việc này sẽ không xoá các ảnh nền tuỳ chọn đã cài cho các cuộc trò chuyện của bạn.</string>
-  <string name="ChatWallpaperFragment__reset_all_wallpapers">Cài lại tất cả các ảnh nền</string>
-  <string name="ChatWallpaperFragment__reset_all_wallpapers_including_custom">Cài lại tất cả ảnh nền, bao gồm ảnh nền tuỳ chọn mà bạn đã cài cho tất cả các cuộc trò chuyện?</string>
+  <string name="ChatWallpaperFragment__clear_wallpaper_for_this_chat">Xoá ảnh nền cuộc trò chuyện này?</string>
+  <string name="ChatWallpaperFragment__clear_wallpaper_this_will_not">Xoá ảnh nền? Thao tác này sẽ không xoá các ảnh nền đã cài cho các cuộc trò chuyện khác của bạn.</string>
+  <string name="ChatWallpaperFragment__reset_all_wallpapers">Đặt lại tất cả ảnh nền</string>
+  <string name="ChatWallpaperFragment__reset_all_wallpapers_including_custom">Đặt lại tất cả ảnh nền, bao gồm ảnh nền tuỳ chọn mà bạn đã cài cho các cuộc trò chuyện?</string>
   <string name="ChatWallpaperFragment__contact_name">Tên liên hệ</string>
   <string name="ChatWallpaperFragment__reset">Đặt lại</string>
   <string name="ChatWallpaperFragment__clear">Xoá</string>
   <string name="ChatWallpaperFragment__wallpaper_preview_description">Xem trước ảnh nền</string>
   <!--ChatWallpaperSelectionFragment-->
-  <string name="ChatWallpaperSelectionFragment__choose_from_photos">Chọn từ ảnh</string>
+  <string name="ChatWallpaperSelectionFragment__choose_from_photos">Chọn từ bộ sưu tập</string>
   <string name="ChatWallpaperSelectionFragment__presets">Bộ cài sẵn</string>
   <!--ChatWallpaperPreviewActivity-->
   <string name="ChatWallpaperPreviewActivity__preview">Xem trước</string>
   <string name="ChatWallpaperPreviewActivity__set_wallpaper">Cài ảnh nền</string>
-  <string name="ChatWallpaperPreviewActivity__swipe_to_preview_more_wallpapers">Kéo trượt để xem trước thêm ảnh nền</string>
+  <string name="ChatWallpaperPreviewActivity__swipe_to_preview_more_wallpapers">Vuốt để xem trước thêm ảnh nền</string>
   <string name="ChatWallpaperPreviewActivity__set_wallpaper_for_all_chats">Cài ảnh nền cho tất cả cuộc trò chuyện</string>
   <string name="ChatWallpaperPreviewActivity__set_wallpaper_for_s">Cài ảnh nền cho %1$s</string>
   <string name="ChatWallpaperPreviewActivity__viewing_your_gallery_requires_the_storage_permission">Cần quyền truy cập bộ nhớ để xem bộ sưu tập.</string>
@@ -2363,7 +2369,7 @@ Nhận thông tin trao đổi mã khóa về phiên bản giao thức không h�
   <string name="WallpaperCropActivity__pinch_to_zoom_drag_to_adjust">Dùng hai ngón để phóng to, kéo để tuỳ chỉnh.</string>
   <string name="WallpaperCropActivity__set_wallpaper_for_all_chats">Cài ảnh nền cho tất cả cuộc trò chuyện.</string>
   <string name="WallpaperCropActivity__set_wallpaper_for_s">Cài ảnh nền cho %s.</string>
-  <string name="WallpaperCropActivity__error_setting_wallpaper">Lỗi cài đặt ảnh nền.</string>
+  <string name="WallpaperCropActivity__error_setting_wallpaper">Lỗi cài ảnh nền.</string>
   <string name="WallpaperCropActivity__blur_photo">Mờ ảnh</string>
   <!--EOF-->
 </resources>
