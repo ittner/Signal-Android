@@ -5,8 +5,7 @@ on:
   push:
     branches:
     - 'master'
-    - '4.**'
-    - '5.**'
+    - 'personal-fork*'
 
 jobs:
   build:
