@@ -101,6 +101,7 @@ import org.thoughtcrime.securesms.util.GroupUtil;
 import org.thoughtcrime.securesms.util.Hex;
 import org.thoughtcrime.securesms.util.IdentityUtil;
 import org.thoughtcrime.securesms.util.MediaUtil;
+import org.thoughtcrime.securesms.util.MessageRecordUtil;
 import org.thoughtcrime.securesms.util.RemoteDeleteUtil;
 import org.thoughtcrime.securesms.util.TextSecurePreferences;
 import org.thoughtcrime.securesms.util.Util;
@@ -133,6 +134,7 @@ import org.whispersystems.signalservice.api.messages.multidevice.SignalServiceSy
 import org.whispersystems.signalservice.api.messages.multidevice.StickerPackOperationMessage;
 import org.whispersystems.signalservice.api.messages.multidevice.VerifiedMessage;
 import org.whispersystems.signalservice.api.messages.multidevice.ViewOnceOpenMessage;
+import org.whispersystems.signalservice.api.messages.multidevice.ViewedMessage;
 import org.whispersystems.signalservice.api.messages.shared.SharedContact;
 import org.whispersystems.signalservice.api.payments.Money;
 import org.whispersystems.signalservice.api.push.SignalServiceAddress;
@@ -147,6 +149,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+import java.util.Objects;
 import java.util.UUID;
 
 /**
@@ -268,6 +271,7 @@ public final class MessageContentProcessor {
         if      (syncMessage.getSent().isPresent())                   handleSynchronizeSentMessage(content, syncMessage.getSent().get());
         else if (syncMessage.getRequest().isPresent())                handleSynchronizeRequestMessage(syncMessage.getRequest().get());
         else if (syncMessage.getRead().isPresent())                   handleSynchronizeReadMessage(syncMessage.getRead().get(), content.getTimestamp());
+        else if (syncMessage.getViewed().isPresent())                 handleSynchronizeViewedMessage(syncMessage.getViewed().get(), content.getTimestamp());
         else if (syncMessage.getViewOnceOpen().isPresent())           handleSynchronizeViewOnceOpenMessage(syncMessage.getViewOnceOpen().get(), content.getTimestamp());
         else if (syncMessage.getVerified().isPresent())               handleSynchronizeVerifiedMessage(syncMessage.getVerified().get());
         else if (syncMessage.getStickerPackOperations().isPresent())  handleSynchronizeStickerPackOperation(syncMessage.getStickerPackOperations().get());
@@ -1019,6 +1023,24 @@ public final class MessageContentProcessor {
     messageNotifier.updateNotification(context);
   }
 
+  private void handleSynchronizeViewedMessage(@NonNull List<ViewedMessage> viewedMessages, long envelopeTimestamp) {
+    List<Long> toMarkViewed = Stream.of(viewedMessages)
+                                    .map(message -> {
+                                      RecipientId author = Recipient.externalPush(context, message.getSender()).getId();
+                                      return DatabaseFactory.getMmsSmsDatabase(context).getMessageFor(message.getTimestamp(), author);
+                                    })
+                                    .filter(message -> message != null && message.isMms())
+                                    .map(MessageRecord::getId)
+                                    .toList();
+
+    DatabaseFactory.getMmsDatabase(context).setIncomingMessagesViewed(toMarkViewed);
+
+    MessageNotifier messageNotifier = ApplicationDependencies.getMessageNotifier();
+    messageNotifier.setLastDesktopActivityTimestamp(envelopeTimestamp);
+    messageNotifier.cancelDelayedNotifications();
+    messageNotifier.updateNotification(context);
+  }
+
   private void handleSynchronizeViewOnceOpenMessage(@NonNull ViewOnceOpenMessage openMessage, long envelopeTimestamp) {
     log(String.valueOf(envelopeTimestamp), "Handling a view-once open for message: " + openMessage.getTimestamp());
 
@@ -1676,6 +1698,7 @@ public final class MessageContentProcessor {
           StickerSlide.HEIGHT,
           null,
           String.valueOf(new SecureRandom().nextLong()),
+          false,
           false,
           false,
           false,

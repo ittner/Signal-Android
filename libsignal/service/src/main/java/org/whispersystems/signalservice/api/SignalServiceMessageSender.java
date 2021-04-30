@@ -49,6 +49,7 @@ import org.whispersystems.signalservice.api.messages.multidevice.SignalServiceSy
 import org.whispersystems.signalservice.api.messages.multidevice.StickerPackOperationMessage;
 import org.whispersystems.signalservice.api.messages.multidevice.VerifiedMessage;
 import org.whispersystems.signalservice.api.messages.multidevice.ViewOnceOpenMessage;
+import org.whispersystems.signalservice.api.messages.multidevice.ViewedMessage;
 import org.whispersystems.signalservice.api.messages.shared.SharedContact;
 import org.whispersystems.signalservice.api.push.SignalServiceAddress;
 import org.whispersystems.signalservice.api.push.exceptions.AuthorizationFailedException;
@@ -91,6 +92,7 @@ import org.whispersystems.signalservice.internal.push.http.ResumableUploadSpec;
 import org.whispersystems.signalservice.internal.util.StaticCredentialsProvider;
 import org.whispersystems.signalservice.internal.util.Util;
 import org.whispersystems.util.Base64;
+import org.whispersystems.util.FlagUtil;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -353,6 +355,8 @@ public class SignalServiceMessageSender {
       content = createMultiDeviceGroupsContent(message.getGroups().get().asStream());
     } else if (message.getRead().isPresent()) {
       content = createMultiDeviceReadContent(message.getRead().get());
+    } else if (message.getViewed().isPresent()) {
+      content = createMultiDeviceViewedContent(message.getViewed().get());
     } else if (message.getViewOnceOpen().isPresent()) {
       content = createMultiDeviceViewOnceOpenContent(message.getViewOnceOpen().get());
     } else if (message.getBlockedList().isPresent()) {
@@ -452,6 +456,7 @@ public class SignalServiceMessageSender {
                                               attachment.getFileName(),
                                               attachment.getVoiceNote(),
                                               attachment.isBorderless(),
+                                              attachment.isGif(),
                                               attachment.getCaption(),
                                               attachment.getBlurHash(),
                                               attachment.getUploadTimestamp());
@@ -492,6 +497,7 @@ public class SignalServiceMessageSender {
                                               attachment.getFileName(),
                                               attachment.getVoiceNote(),
                                               attachment.isBorderless(),
+                                              attachment.isGif(),
                                               attachment.getCaption(),
                                               attachment.getBlurHash(),
                                               attachment.getUploadTimestamp());
@@ -956,6 +962,27 @@ public class SignalServiceMessageSender {
       }
 
       builder.addRead(readBuilder.build());
+    }
+
+    return container.setSyncMessage(builder).build().toByteArray();
+  }
+
+  private byte[] createMultiDeviceViewedContent(List<ViewedMessage> readMessages) {
+    Content.Builder     container = Content.newBuilder();
+    SyncMessage.Builder builder   = createSyncMessageBuilder();
+
+    for (ViewedMessage readMessage : readMessages) {
+      SyncMessage.Viewed.Builder viewedBuilder = SyncMessage.Viewed.newBuilder().setTimestamp(readMessage.getTimestamp());
+
+      if (readMessage.getSender().getUuid().isPresent()) {
+        viewedBuilder.setSenderUuid(readMessage.getSender().getUuid().get().toString());
+      }
+
+      if (readMessage.getSender().getNumber().isPresent()) {
+        viewedBuilder.setSenderE164(readMessage.getSender().getNumber().get());
+      }
+
+      builder.addViewed(viewedBuilder.build());
     }
 
     return container.setSyncMessage(builder).build().toByteArray();
@@ -1554,13 +1581,21 @@ public class SignalServiceMessageSender {
       builder.setHeight(attachment.getHeight());
     }
 
+    int flags = 0;
+
     if (attachment.getVoiceNote()) {
-      builder.setFlags(AttachmentPointer.Flags.VOICE_MESSAGE_VALUE);
+      flags |= FlagUtil.toBinaryFlag(AttachmentPointer.Flags.VOICE_MESSAGE_VALUE);
     }
 
     if (attachment.isBorderless()) {
-      builder.setFlags(AttachmentPointer.Flags.BORDERLESS_VALUE);
+      flags |= FlagUtil.toBinaryFlag(AttachmentPointer.Flags.BORDERLESS_VALUE);
     }
+
+    if (attachment.isGif()) {
+      flags |= FlagUtil.toBinaryFlag(AttachmentPointer.Flags.GIF_VALUE);
+    }
+
+    builder.setFlags(flags);
 
     if (attachment.getCaption().isPresent()) {
       builder.setCaption(attachment.getCaption().get());

@@ -465,6 +465,7 @@ public class SmsDatabase extends MessageDatabase {
     ContentValues  contentValues = new ContentValues();
 
     contentValues.put(NOTIFIED, 1);
+    contentValues.put(REACTIONS_LAST_SEEN, System.currentTimeMillis());
 
     database.update(TABLE_NAME, contentValues, ID_WHERE, new String[] {String.valueOf(id)});
   }
@@ -632,6 +633,11 @@ public class SmsDatabase extends MessageDatabase {
   @Override
   public @Nullable MarkedMessageInfo setIncomingMessageViewed(long messageId) {
     return null;
+  }
+
+  @Override
+  public @NonNull List<MarkedMessageInfo> setIncomingMessagesViewed(@NonNull List<Long> messageIds) {
+    return Collections.emptyList();
   }
 
   private Pair<Long, Long> updateMessageBodyAndType(long messageId, String body, long maskOff, long maskOn) {

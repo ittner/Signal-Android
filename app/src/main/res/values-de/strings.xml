@@ -1064,6 +1064,7 @@
   <string name="MessageRequestBottomView_do_you_want_to_join_this_group_they_wont_know_youve_seen_their_messages_until_you_accept">Möchtest du dieser Gruppe beitreten und deinen Namen und dein Foto mit deren Mitgliedern teilen? Sie wissen nicht, dass du ihre Nachrichten gesehen hast, bis du die Anfrage annimmst.</string>
   <string name="MessageRequestBottomView_join_this_group_they_wont_know_youve_seen_their_messages_until_you_accept">Dieser Gruppe beitreten? Solange du nicht beitrittst, werden die Gruppenmitglieder nicht wissen, dass du ihre Nachrichten gesehen hast.</string>
   <string name="MessageRequestBottomView_unblock_this_group_and_share_your_name_and_photo_with_its_members">Möchtest du diese Gruppe freigeben und deinen Namen und dein Foto mit deren Mitgliedern teilen? Du wirst keine Nachrichten erhalten, bis du die Gruppe freigibst.</string>
+  <string name="MessageRequestProfileView_view">Anzeigen</string>
   <string name="MessageRequestProfileView_member_of_one_group">Mitglied von %1$s</string>
   <string name="MessageRequestProfileView_member_of_two_groups">Mitglied von %1$s und %2$s</string>
   <string name="MessageRequestProfileView_member_of_many_groups">Mitglied von %1$s, %2$s und %3$s</string>
@@ -1598,6 +1599,8 @@ Schlüsselaustausch-Nachricht für eine ungültige Protokollversion empfangen</s
   <string name="ConversationUpdateItem_call_is_full">Anruf ist voll</string>
   <string name="ConversationUpdateItem_invite_friends">Freunde einladen</string>
   <string name="ConversationUpdateItem_enable_call_notifications">Benachrichtigungen für Anrufe aktivieren</string>
+  <string name="ConversationUpdateItem_no_groups_in_common_review_requests_carefully">Keine gemeinsamen Gruppen. Prüfe Anfragen sorgfältig.</string>
+  <string name="ConversationUpdateItem_no_contacts_in_this_group_review_requests_carefully">Keine Kontakte in dieser Gruppe. Prüfe Anfragen sorgfältig.</string>
   <!--audio_view-->
   <string name="audio_view__play_pause_accessibility_description">Abspielen … Pause</string>
   <string name="audio_view__download_accessibility_description">Herunterladen</string>
@@ -1687,7 +1690,7 @@ Schlüsselaustausch-Nachricht für eine ungültige Protokollversion empfangen</s
     <item quantity="other">%d weitere</item>
   </plurals>
   <!--giphy_activity-->
-  <string name="giphy_activity_toolbar__search_gifs_and_stickers">GIFs und Sticker suchen</string>
+  <string name="giphy_activity_toolbar__search_gifs">GIFs suchen</string>
   <!--giphy_fragment-->
   <string name="giphy_fragment__nothing_found">Nichts gefunden</string>
   <!--log_submit_activity-->
@@ -1867,7 +1870,7 @@ Schlüsselaustausch-Nachricht für eine ungültige Protokollversion empfangen</s
   <string name="preferences__pref_use_address_book_photos">Fotos aus Adressbuch verwenden</string>
   <string name="preferences__display_contact_photos_from_your_address_book_if_available">Kontaktfotos aus deinem Adressbuch anzeigen, falls verfügbar</string>
   <string name="preferences__generate_link_previews">Link-Vorschau erzeugen</string>
-  <string name="preferences__retrieve_link_previews_from_websites_for_messages">Falls deine Nachricht einen Link enthält, wird eine Vorschau der verlinkten Seite erstellt</string>
+  <string name="preferences__retrieve_link_previews_from_websites_for_messages">Für zu versendende Nachrichten Link-Vorschauen direkt von den verlinkten Webseiten abrufen</string>
   <string name="preferences__choose_identity">Kontakt auswählen</string>
   <string name="preferences__choose_your_contact_entry_from_the_contacts_list">Wähle deinen Kontakt aus der Kontaktliste.</string>
   <string name="preferences__change_passphrase">Passphrase ändern</string>
@@ -2817,5 +2820,10 @@ Schlüsselaustausch-Nachricht für eine ungültige Protokollversion empfangen</s
   <string name="CanNotSendPaymentDialog__cant_send_payment">Zahlung kann nicht gesendet werden</string>
   <string name="CanNotSendPaymentDialog__to_send_a_payment_to_this_user">Zum Senden einer Zahlung an diesen Nutzer muss dieser von dir eine Nachrichtenanfrage akzeptieren. Sende ihm eine Nachricht, um eine Nachrichtenanfrage zu stellen.</string>
   <string name="CanNotSendPaymentDialog__send_a_message">Sende eine Nachricht</string>
+  <!--GroupsInCommonMessageRequest-->
+  <string name="GroupsInCommonMessageRequest__you_have_no_groups_in_common_with_this_person">Du hast keine gemeinsamen Gruppen mit dieser Person. Prüfe Anfragen vor dem Annehmen sorgfältig, um ungewollte Nachrichten zu vermeiden.</string>
+  <string name="GroupsInCommonMessageRequest__none_of_your_contacts_or_people_you_chat_with_are_in_this_group">Keine deiner Kontakte oder Personen, mit denen du dich unterhältst, sind in dieser Gruppe. Prüfe Anfragen vor dem Annehmen sorgfältig, um ungewollte Nachrichten zu vermeiden.</string>
+  <string name="GroupsInCommonMessageRequest__about_message_requests">Mehr zu Unterhaltungsanfragen</string>
+  <string name="GroupsInCommonMessageRequest__okay">OK</string>
   <!--EOF-->
 </resources>

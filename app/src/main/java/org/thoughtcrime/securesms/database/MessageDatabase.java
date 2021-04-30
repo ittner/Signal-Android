@@ -128,6 +128,7 @@ public abstract class MessageDatabase extends Database implements MmsSmsColumns 
   public abstract Pair<Long, Long> updateBundleMessageBody(long messageId, String body);
   public abstract @NonNull List<MarkedMessageInfo> getViewedIncomingMessages(long threadId);
   public abstract @Nullable MarkedMessageInfo setIncomingMessageViewed(long messageId);
+  public abstract @NonNull List<MarkedMessageInfo> setIncomingMessagesViewed(@NonNull List<Long> messageIds);
 
   public abstract void addFailures(long messageId, List<NetworkFailure> failure);
   public abstract void removeFailure(long messageId, NetworkFailure failure);
@@ -319,6 +320,8 @@ public abstract class MessageDatabase extends Database implements MmsSmsColumns 
       setReactions(db, messageId, updatedList);
 
       db.setTransactionSuccessful();
+    } catch (NoSuchMessageException e) {
+      Log.w(TAG, "No message for provided id", e);
     } finally {
       db.endTransaction();
     }
@@ -338,6 +341,8 @@ public abstract class MessageDatabase extends Database implements MmsSmsColumns 
       setReactions(db, messageId, updatedList);
 
       db.setTransactionSuccessful();
+    } catch (NoSuchMessageException e) {
+      Log.w(TAG, "No message for provided id", e);
     } finally {
       db.endTransaction();
     }
@@ -543,14 +548,15 @@ public abstract class MessageDatabase extends Database implements MmsSmsColumns 
     return Optional.absent();
   }
 
-  private void setReactions(@NonNull SQLiteDatabase db, long messageId, @NonNull ReactionList reactionList) {
-    ContentValues values       = new ContentValues(1);
+  private void setReactions(@NonNull SQLiteDatabase db, long messageId, @NonNull ReactionList reactionList) throws NoSuchMessageException {
+    ContentValues values       = new ContentValues();
+    boolean       isOutgoing   = getMessageRecord(messageId).isOutgoing();
     boolean       hasReactions = reactionList.getReactionsCount() != 0;
 
     values.put(REACTIONS, reactionList.getReactionsList().isEmpty() ? null : reactionList.toByteArray());
     values.put(REACTIONS_UNREAD, hasReactions ? 1 : 0);
 
-    if (hasReactions) {
+    if (isOutgoing && hasReactions) {
       values.put(NOTIFIED, 0);
     }
 

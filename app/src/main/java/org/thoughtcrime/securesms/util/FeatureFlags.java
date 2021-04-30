@@ -75,8 +75,8 @@ public final class FeatureFlags {
   private static final String ANIMATED_STICKER_MIN_TOTAL_MEMORY = "android.animatedStickerMinTotalMemory";
   private static final String MESSAGE_PROCESSOR_ALARM_INTERVAL  = "android.messageProcessor.alarmIntervalMins";
   private static final String MESSAGE_PROCESSOR_DELAY           = "android.messageProcessor.foregroundDelayMs";
-  private static final String STORAGE_SYNC_V2                   = "android.storageSyncV2.3";
   private static final String NOTIFICATION_REWRITE              = "android.notificationRewrite";
+  private static final String MP4_GIF_SEND_SUPPORT              = "android.mp4GifSendSupport";
 
   /**
    * We will only store remote values for flags in this set. If you want a flag to be controllable
@@ -108,8 +108,8 @@ public final class FeatureFlags {
       ANIMATED_STICKER_MIN_TOTAL_MEMORY,
       MESSAGE_PROCESSOR_ALARM_INTERVAL,
       MESSAGE_PROCESSOR_DELAY,
-      STORAGE_SYNC_V2,
-      NOTIFICATION_REWRITE
+      NOTIFICATION_REWRITE,
+      MP4_GIF_SEND_SUPPORT
   );
 
   @VisibleForTesting
@@ -153,8 +153,8 @@ public final class FeatureFlags {
       MESSAGE_PROCESSOR_ALARM_INTERVAL,
       MESSAGE_PROCESSOR_DELAY,
       GV1_FORCED_MIGRATE,
-      STORAGE_SYNC_V2,
-      NOTIFICATION_REWRITE
+      NOTIFICATION_REWRITE,
+      MP4_GIF_SEND_SUPPORT
   );
 
   /**
@@ -341,14 +341,13 @@ public final class FeatureFlags {
     return getInteger(ANIMATED_STICKER_MIN_TOTAL_MEMORY, (int) ByteUnit.GIGABYTES.toMegabytes(3));
   }
 
-  /** Whether or not to use {@link org.thoughtcrime.securesms.jobs.StorageSyncJobV2}. */
-  public static boolean storageSyncV2() {
-    return getBoolean(STORAGE_SYNC_V2, true);
-  }
-
   /** Whether or not to use the new notification system. */
   public static boolean useNewNotificationSystem() {
-    return getBoolean(NOTIFICATION_REWRITE, false) && Build.VERSION.SDK_INT >= 26;
+    return Build.VERSION.SDK_INT >= 26 || getBoolean(NOTIFICATION_REWRITE, false);
+  }
+
+  public static boolean mp4GifSendSupport() {
+    return getBoolean(MP4_GIF_SEND_SUPPORT, false);
   }
 
   /** Only for rendering debug info. */

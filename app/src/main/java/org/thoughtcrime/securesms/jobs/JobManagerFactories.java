@@ -43,6 +43,7 @@ import org.thoughtcrime.securesms.migrations.PassingMigrationJob;
 import org.thoughtcrime.securesms.migrations.PinOptOutMigration;
 import org.thoughtcrime.securesms.migrations.PinReminderMigrationJob;
 import org.thoughtcrime.securesms.migrations.ProfileMigrationJob;
+import org.thoughtcrime.securesms.migrations.ProfileSharingUpdateMigrationJob;
 import org.thoughtcrime.securesms.migrations.RecipientSearchMigrationJob;
 import org.thoughtcrime.securesms.migrations.RegistrationPinV2MigrationJob;
 import org.thoughtcrime.securesms.migrations.StickerAdditionMigrationJob;
@@ -103,6 +104,7 @@ public final class JobManagerFactories {
       put(MultiDeviceStorageSyncRequestJob.KEY,      new MultiDeviceStorageSyncRequestJob.Factory());
       put(MultiDeviceVerifiedUpdateJob.KEY,          new MultiDeviceVerifiedUpdateJob.Factory());
       put(MultiDeviceViewOnceOpenJob.KEY,            new MultiDeviceViewOnceOpenJob.Factory());
+      put(MultiDeviceViewedUpdateJob.KEY,            new MultiDeviceViewedUpdateJob.Factory());
       put(ProfileKeySendJob.KEY,                     new ProfileKeySendJob.Factory());
       put(PushDecryptMessageJob.KEY,                 new PushDecryptMessageJob.Factory());
       put(PushDecryptDrainedJob.KEY,                 new PushDecryptDrainedJob.Factory());
@@ -140,8 +142,7 @@ public final class JobManagerFactories {
       put(StickerDownloadJob.KEY,                    new StickerDownloadJob.Factory());
       put(StickerPackDownloadJob.KEY,                new StickerPackDownloadJob.Factory());
       put(StorageForcePushJob.KEY,                   new StorageForcePushJob.Factory());
-      put(StorageSyncJob.KEY,                        new StorageSyncJob.Factory());
-      put(StorageSyncJobV2.KEY,                      new StorageSyncJobV2.Factory());
+      put(StorageSyncJob.KEY,                      new StorageSyncJob.Factory());
       put(TrimThreadJob.KEY,                         new TrimThreadJob.Factory());
       put(TypingSendJob.KEY,                         new TypingSendJob.Factory());
       put(UpdateApkJob.KEY,                          new UpdateApkJob.Factory());
@@ -167,6 +168,7 @@ public final class JobManagerFactories {
       put(PinOptOutMigration.KEY,                    new PinOptOutMigration.Factory());
       put(PinReminderMigrationJob.KEY,               new PinReminderMigrationJob.Factory());
       put(ProfileMigrationJob.KEY,                   new ProfileMigrationJob.Factory());
+      put(ProfileSharingUpdateMigrationJob.KEY,      new ProfileSharingUpdateMigrationJob.Factory());
       put(RecipientSearchMigrationJob.KEY,           new RecipientSearchMigrationJob.Factory());
       put(RegistrationPinV2MigrationJob.KEY,         new RegistrationPinV2MigrationJob.Factory());
       put(StickerLaunchMigrationJob.KEY,             new StickerLaunchMigrationJob.Factory());
@@ -188,6 +190,7 @@ public final class JobManagerFactories {
       put("Argon2TestJob",                           new FailingJob.Factory());
       put("Argon2TestMigrationJob",                  new PassingMigrationJob.Factory());
       put("StorageKeyRotationMigrationJob",          new PassingMigrationJob.Factory());
+      put("StorageSyncJob",                          new StorageSyncJob.Factory());
       put("WakeGroupV2Job",                          new FailingJob.Factory());
     }};
   }

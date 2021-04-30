@@ -1273,6 +1273,7 @@
   <string name="MessageRequestBottomView_do_you_want_to_join_this_group_they_wont_know_youve_seen_their_messages_until_you_accept">الانضمام إلى هذه المجموعة ومشاركة اسمك وصورتك مع أعضائها؟ لن يعرفوا أنك قرأت رسالتهم حتى توافق.</string>
   <string name="MessageRequestBottomView_join_this_group_they_wont_know_youve_seen_their_messages_until_you_accept">هل تود الانضمام إلى هذه المجموعة؟ لن يعرفوا أنك قرأت رسائلهم إلا إذا وافقت.</string>
   <string name="MessageRequestBottomView_unblock_this_group_and_share_your_name_and_photo_with_its_members">إزالة الحظر عن هذه المجموعة ومشاركة اسمك وصورتك مع أعضائها؟ لن تتلقى أية رسائل حتى تزيل الحظر.</string>
+  <string name="MessageRequestProfileView_view">إظهار</string>
   <string name="MessageRequestProfileView_member_of_one_group">عضو في %1$s</string>
   <string name="MessageRequestProfileView_member_of_two_groups">عضو في %1$s و%2$s</string>
   <string name="MessageRequestProfileView_member_of_many_groups">عضو في %1$s و%2$s و%3$s</string>
@@ -1962,7 +1963,6 @@
     <item quantity="other">%d آخرون</item>
   </plurals>
   <!--giphy_activity-->
-  <string name="giphy_activity_toolbar__search_gifs_and_stickers">ابحث في الصور المتحركة والملصقات</string>
   <!--giphy_fragment-->
   <string name="giphy_fragment__nothing_found">لم نعثر على شيء</string>
   <!--log_submit_activity-->
@@ -2904,5 +2904,7 @@
   <!--UnreadPayments-->
   <!--CanNotSendPaymentDialog-->
   <string name="CanNotSendPaymentDialog__send_a_message">إرسال رسالة</string>
+  <!--GroupsInCommonMessageRequest-->
+  <string name="GroupsInCommonMessageRequest__okay">حسنا</string>
   <!--EOF-->
 </resources>
