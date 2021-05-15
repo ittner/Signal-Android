@@ -50,6 +50,7 @@ import org.thoughtcrime.securesms.database.model.databaseprotos.ReactionList;
 import org.thoughtcrime.securesms.dependencies.ApplicationDependencies;
 import org.thoughtcrime.securesms.groups.GroupId;
 import org.thoughtcrime.securesms.jobs.RefreshPreKeysJob;
+import org.thoughtcrime.securesms.keyvalue.SignalStore;
 import org.thoughtcrime.securesms.notifications.NotificationChannels;
 import org.thoughtcrime.securesms.phonenumbers.PhoneNumberFormatter;
 import org.thoughtcrime.securesms.profiles.AvatarHelper;
@@ -179,8 +180,9 @@ public class SQLCipherOpenHelper extends SQLiteOpenHelper implements SignalDatab
   private static final int CLEAN_STORAGE_IDS_WITHOUT_INFO   = 95;
   private static final int CLEAN_REACTION_NOTIFICATIONS     = 96;
   private static final int STORAGE_SERVICE_REFACTOR         = 97;
+  private static final int CLEAR_MMS_STORAGE_IDS            = 98;
 
-  private static final int    DATABASE_VERSION = 97;
+  private static final int    DATABASE_VERSION = 98;
   private static final String DATABASE_NAME    = "signal.db";
 
   private final Context        context;
@@ -401,7 +403,7 @@ public class SQLCipherOpenHelper extends SQLiteOpenHelper implements SignalDatab
             Uri     messageSoundUri = messageSound != null ? Uri.parse(messageSound) : null;
             int     vibrateState    = cursor.getInt(cursor.getColumnIndexOrThrow("vibrate"));
             String  displayName     = NotificationChannels.getChannelDisplayNameFor(context, systemName, profileName, null, address);
-            boolean vibrateEnabled  = vibrateState == 0 ? TextSecurePreferences.isNotificationVibrateEnabled(context) : vibrateState == 1;
+            boolean vibrateEnabled  = vibrateState == 0 ? SignalStore.settings().isMessageVibrateEnabled() :vibrateState == 1;
 
             if (GroupId.isEncodedGroup(address)) {
               try(Cursor groupCursor = db.rawQuery("SELECT title FROM groups WHERE group_id = ?", new String[] { address })) {
@@ -1351,6 +1353,10 @@ public class SQLCipherOpenHelper extends SQLiteOpenHelper implements SignalDatab
             byte[] reactions         = cursor.getBlob(cursor.getColumnIndexOrThrow("reactions"));
             long   notifiedTimestamp = cursor.getLong(cursor.getColumnIndexOrThrow("notified_timestamp"));
 
+            if (reactions == null) {
+              continue;
+            }
+
             try {
               boolean hasReceiveLaterThanNotified = ReactionList.parseFrom(reactions)
                                                                 .getReactionsList()
@@ -1376,6 +1382,10 @@ public class SQLCipherOpenHelper extends SQLiteOpenHelper implements SignalDatab
           while (cursor.moveToNext()) {
             byte[] reactions         = cursor.getBlob(cursor.getColumnIndexOrThrow("reactions"));
             long   notifiedTimestamp = cursor.getLong(cursor.getColumnIndexOrThrow("notified_timestamp"));
+
+            if (reactions == null) {
+              continue;
+            }
 
             try {
               boolean hasReceiveLaterThanNotified = ReactionList.parseFrom(reactions)
@@ -1436,6 +1446,15 @@ public class SQLCipherOpenHelper extends SQLiteOpenHelper implements SignalDatab
         dirtyCount = db.update("recipient", clearDirtyValues, "dirty != 0", null);
 
         Log.d(TAG, String.format(Locale.US, "For storage service refactor migration, there were %d inserts, %d updated, and %d deletes. Cleared the dirty status on %d rows.", insertCount, updateCount, deleteCount, dirtyCount));
+      }
+
+      if (oldVersion < CLEAR_MMS_STORAGE_IDS) {
+        ContentValues deleteValues = new ContentValues();
+        deleteValues.putNull("storage_service_key");
+
+        int deleteCount = db.update("recipient", deleteValues, "storage_service_key NOT NULL AND (group_type = 1 OR (group_type = 0 AND phone IS NULL AND uuid IS NULL))", null);
+
+        Log.d(TAG, "Cleared storageIds from " + deleteCount + " rows. They were either MMS groups or empty contacts.");
       }
 
       db.setTransactionSuccessful();

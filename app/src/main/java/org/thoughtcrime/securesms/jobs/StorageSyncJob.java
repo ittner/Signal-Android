@@ -214,18 +214,24 @@ public class StorageSyncJob extends BaseJob {
     final SignalStorageManifest localManifest  = SignalStore.storageService().getManifest();
     final SignalStorageManifest remoteManifest = accountManager.getStorageManifestIfDifferentVersion(storageServiceKey, localManifest.getVersion()).or(localManifest);
 
+    stopwatch.split("remote-manifest");
+
     Recipient self                 = Recipient.self().fresh();
     boolean   needsMultiDeviceSync = false;
     boolean   needsForcePush       = false;
 
-    stopwatch.split("remote-manifest");
+    if (self.getStorageServiceId() == null) {
+      Log.w(TAG, "No storageId for self. Generating.");
+      DatabaseFactory.getRecipientDatabase(context).updateStorageId(self.getId(), StorageSyncHelper.generateKey());
+      self = Recipient.self().fresh();
+    }
 
     Log.i(TAG, "Our version: " + localManifest.getVersion() + ", their version: " + remoteManifest.getVersion());
 
     if (remoteManifest.getVersion() > localManifest.getVersion()) {
       Log.i(TAG, "[Remote Sync] Newer manifest version found!");
 
-      List<StorageId>    localStorageIdsBeforeMerge = getAllLocalStorageIds(context, Recipient.self().fresh());
+      List<StorageId>    localStorageIdsBeforeMerge = getAllLocalStorageIds(context, self);
       IdDifferenceResult idDifference               = StorageSyncHelper.findIdDifference(remoteManifest.getStorageIds(), localStorageIdsBeforeMerge);
 
       if (idDifference.hasTypeMismatches()) {
@@ -270,6 +276,8 @@ public class StorageSyncJob extends BaseJob {
 
         db.beginTransaction();
         try {
+          self = Recipient.self().fresh();
+
           new ContactRecordProcessor(context, self).process(remoteContacts, StorageSyncHelper.KEY_GENERATOR);
           new GroupV1RecordProcessor(context).process(remoteGv1, StorageSyncHelper.KEY_GENERATOR);
           new GroupV2RecordProcessor(context).process(remoteGv2, StorageSyncHelper.KEY_GENERATOR);
@@ -309,7 +317,9 @@ public class StorageSyncJob extends BaseJob {
 
     db.beginTransaction();
     try {
-      List<StorageId>           localStorageIds = getAllLocalStorageIds(context, Recipient.self().fresh());
+      self = Recipient.self().fresh();
+
+      List<StorageId>           localStorageIds = getAllLocalStorageIds(context, self);
       IdDifferenceResult        idDifference    = StorageSyncHelper.findIdDifference(remoteManifest.getStorageIds(), localStorageIds);
       List<SignalStorageRecord> remoteInserts   = buildLocalStorageRecords(context, self, idDifference.getLocalOnlyIds());
       List<byte[]>              remoteDeletes   = Stream.of(idDifference.getRemoteOnlyIds()).map(StorageId::getRaw).toList();

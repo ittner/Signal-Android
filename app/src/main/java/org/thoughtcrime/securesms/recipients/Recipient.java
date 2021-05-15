@@ -216,7 +216,14 @@ public class Recipient {
     RecipientDatabase db          = DatabaseFactory.getRecipientDatabase(context);
     RecipientId       recipientId = db.getAndPossiblyMerge(uuid, e164, highTrust);
 
-    return resolved(recipientId);
+    Recipient resolved = resolved(recipientId);
+
+    if (highTrust && !resolved.isRegistered()) {
+      Log.w(TAG, "External high-trust push was locally marked unregistered. Marking as registered.");
+      db.markRegistered(recipientId);
+    }
+
+    return resolved;
   }
 
   /**
@@ -648,6 +655,10 @@ public class Recipient {
 
   public boolean hasUuid() {
     return getUuid().isPresent();
+  }
+
+  public boolean isUuidOnly() {
+    return hasUuid() && !hasSmsAddress();
   }
 
   public @NonNull GroupId requireGroupId() {

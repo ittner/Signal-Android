@@ -966,6 +966,7 @@
   <string name="MessageRecord_you_changed_the_group_name_to_s">آپ نے گروپ کا نام تبدیل کرکے \"%1$s\" کردیا۔</string>
   <string name="MessageRecord_s_changed_the_group_name_to_s">%1$s نے گروپ کا نام تبدیل کرکے \"%2$s\" کردیا۔</string>
   <string name="MessageRecord_the_group_name_has_changed_to_s">گروپ کا نام تبدیل کر کے \"%1$s\" کر دیا گیا ہے۔</string>
+  <!--GV2 description change-->
   <!--GV2 avatar change-->
   <string name="MessageRecord_you_changed_the_group_avatar">آپ نے گروپ کا اوتار بدلا۔</string>
   <string name="MessageRecord_s_changed_the_group_avatar">%1$s نے گروپ کا اوتار بدلا۔</string>
@@ -1157,6 +1158,7 @@
   <string name="ReactionsConversationView_plus">+%1$d</string>
   <!--ReactionsRecipientAdapter-->
   <string name="ReactionsRecipientAdapter_you">آپ</string>
+  <!--RecaptchaRequiredBottomSheetFragment-->
   <!--RecipientPreferencesActivity-->
   <string name="RecipientPreferenceActivity_block">بلاک</string>
   <string name="RecipientPreferenceActivity_unblock">ان بلاک</string>
@@ -1215,6 +1217,7 @@
   <string name="ProxyBottomSheetFragment_do_you_want_to_use_this_proxy_address">کیا آپ یہ پراکسی ایڈریس استعمال کرنا چاہتے ہیں؟</string>
   <string name="ProxyBottomSheetFragment_use_proxy">پروکسی استعمال کرو</string>
   <string name="ProxyBottomSheetFragment_successfully_connected_to_proxy">پراکسی سے کامیابی کے ساتھ منسلک ہوا۔</string>
+  <!--RecaptchaProofActivity-->
   <!--RegistrationActivity-->
   <string name="RegistrationActivity_select_your_country">اپنے ملک کا انتخاب کریں</string>
   <string name="RegistrationActivity_you_must_specify_your_country_code">آپ لازمی ملک کا کوڈ واضع کریں</string>
@@ -1485,6 +1488,7 @@
   <!--SingleRecipientNotificationBuilder-->
   <string name="SingleRecipientNotificationBuilder_signal">Signal</string>
   <string name="SingleRecipientNotificationBuilder_new_message">نيا پیغام</string>
+  <string name="SingleRecipientNotificationBuilder_you">آپ</string>
   <!--ThumbnailView-->
   <string name="ThumbnailView_Play_video_description">ویڈیو چلائیں</string>
   <string name="ThumbnailView_Has_a_caption_description">ایک عنوان ہے</string>
@@ -1590,6 +1594,7 @@
   <string name="ConversationUpdateItem_return_to_call">کال پر واپس جائیں</string>
   <string name="ConversationUpdateItem_call_is_full">کال پوری ہے</string>
   <string name="ConversationUpdateItem_invite_friends">دوستوں کو مدعو کریں</string>
+  <string name="ConversationUpdateItem_view">دیکھیں</string>
   <!--audio_view-->
   <string name="audio_view__play_pause_accessibility_description">چلائیں ۔۔۔ روکیں</string>
   <string name="audio_view__download_accessibility_description">ڈاؤن لوڈ کریں</string>
@@ -1916,7 +1921,6 @@
   <string name="preferences__if_read_receipts_are_disabled_you_wont_be_able_to_see_read_receipts">اگر پڑھنے کی رسیدیں غیر فعال کردی گئی ہیں تو ، آپ دوسروں کی پڑھی ہوئی رسیدیں نہیں دیکھ پائیں گے۔</string>
   <string name="preferences__typing_indicators">ٹائپنگ انڈیکیٹرز</string>
   <string name="preferences__if_typing_indicators_are_disabled_you_wont_be_able_to_see_typing_indicators">اگر ٹائپنگ اندیکیٹرز غیر فعال ہیں، آپ دوسروں سے ٹائپنگ انڈیکیٹرز دیکھنے کے قابل نہیں ہیں۔</string>
-  <string name="preferences__request_keyboard_to_disable_personalized_learning">ذاتی سیکھنے کو غیر فعال کرنے کے لئے کی بورڈ سے درخواست کریں۔ یہ ترتیب ضمانت نہیں ہے ، اور آپ کا کی بورڈ اسے نظرانداز کرسکتا ہے۔</string>
   <string name="preferences_app_protection__blocked_users">مسدود صارفین</string>
   <string name="preferences_chats__when_using_mobile_data">جب موبائل ڈیٹا استعمال کریں</string>
   <string name="preferences_chats__when_using_wifi">جب وائی فائی استعمال کریں</string>
@@ -2527,5 +2531,29 @@
   <string name="CanNotSendPaymentDialog__send_a_message">پیغام بھیجیں</string>
   <!--GroupsInCommonMessageRequest-->
   <string name="GroupsInCommonMessageRequest__okay">ٹھیک ہے</string>
+  <!--GroupDescriptionDialog-->
+  <!--QualitySelectorBottomSheetDialog-->
+  <string name="QualitySelectorBottomSheetDialog__high">اونچا</string>
+  <!--AppSettingsFragment-->
+  <!--AccountSettingsFragment-->
+  <!--ChatsSettingsFragment-->
+  <string name="ChatsSettingsFragment__enter_key_sends">بھیجے گئے key داخل کریں</string>
+  <!--SmsSettingsFragment-->
+  <string name="SmsSettingsFragment__use_as_default_sms_app">پہلے سے طے شدہ ایس ایم ایس ایپ استعمال کریں</string>
+  <!--NotificationsSettingsFragment-->
+  <string name="NotificationsSettingsFragment__messages">پیغامات</string>
+  <string name="NotificationsSettingsFragment__calls">کالز</string>
+  <!--PrivacySettingsFragment-->
+  <string name="PrivacySettingsFragment__blocked">بلاک ہوگیا</string>
+  <string name="PrivacySettingsFragment__messaging">پیغام رسانی</string>
+  <string name="PrivacySettingsFragment__block_screenshots_in_the_recents_list_and_inside_the_app">حالیہ فہرست میں سکرین شاٹ بلاک کریں اور ایپ کے اندر</string>
+  <!--AdvancedPrivacySettingsFragment-->
+  <!--HelpSettingsFragment-->
+  <string name="HelpSettingsFragment__contact_us">ہم سے رابطہ کریں</string>
+  <string name="HelpSettingsFragment__version">ورژن</string>
+  <string name="HelpSettingsFragment__debug_log">ڈی بگ لاگ</string>
+  <string name="HelpSettingsFragment__terms_amp_privacy_policy">شرائط &amp;amp:رازداری کی پالیسی</string>
+  <!--DataAndStorageSettingsFragment-->
+  <string name="DataAndStorageSettingsFragment__calls">کالز</string>
   <!--EOF-->
 </resources>
