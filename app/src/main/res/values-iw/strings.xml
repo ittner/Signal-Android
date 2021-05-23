@@ -95,7 +95,7 @@
   <string name="BlockUnblockDialog_unblock_s">לשחרר חסימה של %1$s?</string>
   <string name="BlockUnblockDialog_block">חסום</string>
   <string name="BlockUnblockDialog_block_and_leave">חסום ועזוב</string>
-  <string name="BlockUnblockDialog_block_and_delete">חסום ומחק</string>
+  <string name="BlockUnblockDialog_report_spam_and_block">דווח על זבל וחסום</string>
   <!--BucketedThreadMedia-->
   <string name="BucketedThreadMedia_Today">היום</string>
   <string name="BucketedThreadMedia_Yesterday">אתמול</string>
@@ -242,6 +242,7 @@
   <string name="ConversationActivity_join">הצטרף</string>
   <string name="ConversationActivity_full">מלאה</string>
   <string name="ConversationActivity_error_sending_media">שגיאה בשליחת מדיה</string>
+  <string name="ConversationActivity__reported_as_spam_and_blocked">דֻּוַּח כזבל ונחסם.</string>
   <!--ConversationAdapter-->
   <plurals name="ConversationAdapter_n_unread_messages">
     <item quantity="one">הודעה %d לא נקראה</item>
@@ -1478,6 +1479,7 @@
   <string name="SubmitDebugLogActivity_success">הצלחה!</string>
   <string name="SubmitDebugLogActivity_copy_this_url_and_add_it_to_your_issue">העתק כתובת זו והוסף אותה אל דוח הסוגיות שלך או דוא״ל התמיכה שלך:\n\n<b>%1$s</b></string>
   <string name="SubmitDebugLogActivity_share">שתף</string>
+  <string name="SubmitDebugLogActivity_this_log_will_be_posted_publicly_online">יומן זה יפורסם באופן ציבורי ומקוון עבור מתנדבים כדי שיצפו בו, ניתן לבחון ולערוך אותו לפני העלאה.</string>
   <!--SupportEmailUtil-->
   <string name="SupportEmailUtil_filter">סנן:</string>
   <string name="SupportEmailUtil_device_info">מידע מכשיר:</string>

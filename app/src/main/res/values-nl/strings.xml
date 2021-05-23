@@ -94,7 +94,7 @@
   <string name="BlockUnblockDialog_unblock_s">%1$s deblokkeren?</string>
   <string name="BlockUnblockDialog_block">Blokkeren</string>
   <string name="BlockUnblockDialog_block_and_leave">Blokkeren en verlaten</string>
-  <string name="BlockUnblockDialog_block_and_delete">Blokkeren en verwijderen</string>
+  <string name="BlockUnblockDialog_report_spam_and_block">Spam melden en blokkeren</string>
   <!--BucketedThreadMedia-->
   <string name="BucketedThreadMedia_Today">Vandaag</string>
   <string name="BucketedThreadMedia_Yesterday">Gisteren</string>
@@ -241,6 +241,7 @@
   <string name="ConversationActivity_join">Deelnemen</string>
   <string name="ConversationActivity_full">Vol</string>
   <string name="ConversationActivity_error_sending_media">Fout bij het verzenden van media</string>
+  <string name="ConversationActivity__reported_as_spam_and_blocked">Gemeld als spam en geblokkeerd.</string>
   <!--ConversationAdapter-->
   <plurals name="ConversationAdapter_n_unread_messages">
     <item quantity="one">%d ongelezen bericht</item>
@@ -1907,7 +1908,7 @@ Tot slot moet Signal de telefoonstatus kunnen lezen om te voorkomen dat Signal-o
   <string name="preferences__pref_use_address_book_photos">Profielfoto uit systeemadresboek</string>
   <string name="preferences__display_contact_photos_from_your_address_book_if_available">Geef indien beschikbaar de profielfoto uit je eigen systeemadresboek weer, in plaats van de profielfoto welke anderen voor henzelf hebben ingesteld.</string>
   <string name="preferences__generate_link_previews">Voorbeeldafbeeldingen genereren</string>
-  <string name="preferences__retrieve_link_previews_from_websites_for_messages">Sta Signal toe om voor elke verwijzing naar een website die je verzendt een voorbeeldafbeelding genereren en aan je bericht bij te voegen. Echter, als je dit inschakelt zouden websites kunnen detecteren dat je hen in je bericht vermeldt.</string>
+  <string name="preferences__retrieve_link_previews_from_websites_for_messages">Sta Signal toe om voor elke verwijzing naar een website die je verzendt een voorbeeldafbeelding genereren en aan je bericht bij te voegen. Echter, als je dit inschakelt zouden websites kunnen detecteren dat je hen in je bericht vermeldt en ook welke pagina je vermeldt.</string>
   <string name="preferences__choose_identity">Identiteit kiezen</string>
   <string name="preferences__choose_your_contact_entry_from_the_contacts_list">Kies je contactgegevens uit de lijst met contactpersonen.</string>
   <string name="preferences__change_passphrase">Wachtwoord wijzigen</string>
