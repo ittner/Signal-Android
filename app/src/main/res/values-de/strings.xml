@@ -415,7 +415,7 @@
   <string name="ShareActivity_multiple_attachments_are_only_supported">Mehrere Anhänge werden nur für Bilder und Videos unterstützt</string>
   <!--GcmRefreshJob-->
   <string name="GcmRefreshJob_Permanent_Signal_communication_failure">Dauerhafter Signal-Kommunikationsfehler!</string>
-  <string name="GcmRefreshJob_Signal_was_unable_to_register_with_Google_Play_Services">Signal konnte nicht für die Google-Play-Dienste registriert werden. Signal-Nachrichten und ‑Anrufe wurden daher deaktiviert. Bitte registriere Signal erneut in Signal → Einstellungen → Erweiterte Einstellungen.</string>
+  <string name="GcmRefreshJob_Signal_was_unable_to_register_with_Google_Play_Services">Signal konnte nicht für die Google-Play-Dienste registriert werden. Signal-Nachrichten und ‑Anrufe wurden daher deaktiviert. Bitte registriere Signal erneut in Signal → Einstellungen → Datenschutz → Erweiterte Einstellungen.</string>
   <!--GiphyActivity-->
   <string name="GiphyActivity_error_while_retrieving_full_resolution_gif">Fehler beim Abruf des GIFs in voller Auflösung</string>
   <!--GiphyFragmentPageAdapter-->
@@ -639,7 +639,7 @@
   <string name="ManageGroupActivity_upgrade_this_group">aktualisiere diese Gruppe.</string>
   <string name="ManageGroupActivity_this_is_an_insecure_mms_group">Dies ist eine unverschlüsselte MMS-Gruppe. Lade deine Kontakte zu Signal ein, um dich vertraulich zu unterhalten.</string>
   <string name="ManageGroupActivity_invite_now">Jetzt einladen</string>
-  <string name="ManageGroupActivity_more">… mehr</string>
+  <string name="ManageGroupActivity_more">mehr</string>
   <string name="ManageGroupActivity_add_group_description">Gruppenbeschreibung hinzufügen …</string>
   <!--GroupMentionSettingDialog-->
   <string name="GroupMentionSettingDialog_notify_me_for_mentions">Mich über Erwähnungen benachrichtigen</string>
@@ -1110,10 +1110,6 @@
   <string name="DeviceProvisioningActivity_it_looks_like_youre_trying_to_link_a_signal_device_using_a_3rd_party_scanner">Du versuchst offenbar, ein Signal-Gerät mithilfe einer fremden Scanner-App zu koppeln. Bitte scanne den QR-Code zu deinem Schutz direkt aus Signal ein.</string>
   <string name="DeviceActivity_signal_needs_the_camera_permission_in_order_to_scan_a_qr_code">Signal benötigt die Berechtigung »Kamera« für das Einscannen von QR-Codes, diese wurde jedoch dauerhaft abgelehnt. Bitte öffne die App-Einstellungen, wähle »Berechtigungen« und aktiviere »Kamera«.</string>
   <string name="DeviceActivity_unable_to_scan_a_qr_code_without_the_camera_permission">QR-Codes können ohne die Berechtigung »Kamera« nicht eingescannt werden.</string>
-  <!--ExpirationDialog-->
-  <string name="ExpirationDialog_disappearing_messages">Verschwindende Nachrichten</string>
-  <string name="ExpirationDialog_your_messages_will_not_expire">Deine Nachrichten laufen nicht ab.</string>
-  <string name="ExpirationDialog_your_messages_will_disappear_s_after_they_have_been_seen">Gesendete und empfangene Nachrichten dieser Unterhaltung werden %s nach dem Lesen verschwinden.</string>
   <!--OutdatedBuildReminder-->
   <string name="OutdatedBuildReminder_update_now">Jetzt aktualisieren</string>
   <string name="OutdatedBuildReminder_your_version_of_signal_will_expire_today">Diese Signal-Version wird heute ablaufen. Aktualisiere auf die neueste Version.</string>
@@ -1174,7 +1170,7 @@
   <!--RecaptchaRequiredBottomSheetFragment-->
   <string name="RecaptchaRequiredBottomSheetFragment_verify_to_continue_messaging">Verifizieren, um weiterhin zu kommunizieren</string>
   <string name="RecaptchaRequiredBottomSheetFragment_to_help_prevent_spam_on_signal">Hilf dabei, Spam auf Signal zu verhindern, und schließe die Verifikation ab.</string>
-  <string name="RecaptchaRequiredBottomSheetFragment_after_verifying_you_can_continue_messaging">Nach erfolgter Verifikation kannst du wieder Nachrichten senden. Alle pausierten Nachrichten werden dann automatisch versendet.</string>
+  <string name="RecaptchaRequiredBottomSheetFragment_after_verifying_you_can_continue_messaging">Nach abgeschlossener Verifikation kannst du wieder Nachrichten senden. Alle pausierten Nachrichten werden dann automatisch versendet.</string>
   <!--RecipientPreferencesActivity-->
   <string name="RecipientPreferenceActivity_block">Blockieren</string>
   <string name="RecipientPreferenceActivity_unblock">Freigeben</string>
@@ -1346,7 +1342,7 @@ Schlüsselaustausch-Nachricht für eine ungültige Protokollversion empfangen</s
   <string name="SubmitDebugLogActivity_success">Erfolgreich!</string>
   <string name="SubmitDebugLogActivity_copy_this_url_and_add_it_to_your_issue">Bitte kopiere diese Internetadresse und füge sie deinem Fehlerbericht oder deiner E-Mail an den Support hinzu:\n\n<b>%1$s</b></string>
   <string name="SubmitDebugLogActivity_share">Teilen</string>
-  <string name="SubmitDebugLogActivity_this_log_will_be_posted_publicly_online">Dieses Diagnoseprotokoll wird im Internet veröffentlicht, damit Mitwirkende es einsehen können. Bevor du das Protokoll hochlädtst, kannst du es noch einmal überprüfen und bearbeiten.</string>
+  <string name="SubmitDebugLogActivity_this_log_will_be_posted_publicly_online">Dieses Diagnoseprotokoll wird im Internet veröffentlicht, damit Mitwirkende es einsehen können. Bevor du das Protokoll hochlädst, kannst du es noch einmal überprüfen und bearbeiten.</string>
   <!--SupportEmailUtil-->
   <string name="SupportEmailUtil_filter">Filter:</string>
   <string name="SupportEmailUtil_device_info">Geräteinformationen:</string>
@@ -1596,7 +1592,7 @@ Schlüsselaustausch-Nachricht für eine ungültige Protokollversion empfangen</s
   <string name="conversation_activity__quick_attachment_drawer_record_and_send_audio_description">Audioanhang aufnehmen und senden</string>
   <string name="conversation_activity__quick_attachment_drawer_lock_record_description">Audioaufnahme arretieren</string>
   <string name="conversation_activity__enable_signal_for_sms">Signal für SMS aktivieren</string>
-  <string name="conversation_activity__message_could_not_be_sent">Nachricht konnte nicht versendet werden. Überprüfe deine Verbindung und versuche es erneut.</string>
+  <string name="conversation_activity__message_could_not_be_sent">Nachricht konnte nicht versendet werden. Überprüfe deine Internetverbindung und versuche es erneut.</string>
   <!--conversation_input_panel-->
   <string name="conversation_input_panel__slide_to_cancel">Zum Abbrechen wischen</string>
   <string name="conversation_input_panel__cancel">Abbrechen</string>
@@ -1621,6 +1617,7 @@ Schlüsselaustausch-Nachricht für eine ungültige Protokollversion empfangen</s
   <string name="ConversationUpdateItem_no_groups_in_common_review_requests_carefully">Keine gemeinsamen Gruppen. Prüfe Anfragen sorgfältig.</string>
   <string name="ConversationUpdateItem_no_contacts_in_this_group_review_requests_carefully">Keine Kontakte in dieser Gruppe. Prüfe Anfragen sorgfältig.</string>
   <string name="ConversationUpdateItem_view">Anzeigen</string>
+  <string name="ConversationUpdateItem_the_disappearing_message_time_will_be_set_to_s_when_you_message_them">Die Zeit für verschwindende Nachrichten wird auf %1$s festgelegt, sobald du eine Nachricht sendest.</string>
   <!--audio_view-->
   <string name="audio_view__play_pause_accessibility_description">Abspielen … Pause</string>
   <string name="audio_view__download_accessibility_description">Herunterladen</string>
@@ -1761,7 +1758,7 @@ Schlüsselaustausch-Nachricht für eine ungültige Protokollversion empfangen</s
   <string name="EditAboutFragment_taking_a_break">Mache eine Pause</string>
   <string name="EditAboutFragment_working_on_something_new">Arbeite an etwas Neuem</string>
   <!--EditProfileFragment-->
-  <string name="EditProfileFragment__edit_group_name_and_photo">Gruppenname und -bild bearbeiten</string>
+  <string name="EditProfileFragment__edit_group_name_and_photo">Gruppendetails bearbeiten</string>
   <string name="EditProfileFragment__group_name">Gruppenname</string>
   <string name="EditProfileFragment__group_description">Gruppenbeschreibung</string>
   <!--EditProfileNameFragment-->
@@ -2061,11 +2058,11 @@ Schlüsselaustausch-Nachricht für eine ungültige Protokollversion empfangen</s
   <string name="PaymentsAllActivityFragment__sent">Gesendet</string>
   <string name="PaymentsAllActivityFragment__received">Empfangen</string>
   <string name="PaymentsHomeFragment__introducing_payments">Neu: Zahlungen (Beta)</string>
-  <string name="PaymentsHomeFragment__use_signal_to_send_and_receive">Verwende Signal, um MobileCoin zu senden und zu empfangen, eine neue und auf Datenschutz ausgerichtete digitale Währung. Aktivieren, um loszulegen.</string>
+  <string name="PaymentsHomeFragment__use_signal_to_send_and_receive">Nutze Signal für das Senden und Empfangen von MobileCoin, einer neuen und auf Datenschutz ausgerichteten digitalen Währung. Aktivieren, um loszulegen.</string>
   <string name="PaymentsHomeFragment__activate_payments">Zahlungen aktivieren</string>
   <string name="PaymentsHomeFragment__activating_payments">Zahlungen werden aktiviert …</string>
   <string name="PaymentsHomeFragment__restore_payments_account">Zahlungskonto wiederherstellen </string>
-  <string name="PaymentsHomeFragment__no_recent_activity_yet">Bisher keine Aktivitäten.</string>
+  <string name="PaymentsHomeFragment__no_recent_activity_yet">Bisher noch keine Aktivitäten</string>
   <string name="PaymentsHomeFragment__pending_requests">Ausstehende Anfragen</string>
   <string name="PaymentsHomeFragment__recent_activity">Letzte Aktivitäten</string>
   <string name="PaymentsHomeFragment__see_all">Alle anzeigen</string>
@@ -2084,7 +2081,7 @@ Schlüsselaustausch-Nachricht für eine ungültige Protokollversion empfangen</s
   <string name="PaymentsHomeFragment__processing_payment">Zahlung wird verarbeitet</string>
   <string name="PaymentsHomeFragment__unknown_amount">---</string>
   <string name="PaymentsHomeFragment__currency_conversion_not_available">Währungsumrechnung nicht verfügbar</string>
-  <string name="PaymentsHomeFragment__cant_display_currency_conversion">Währungsumrechnung kann nicht angezeigt werden. Überprüfe deine Telefonverbindung und versuche es erneut.</string>
+  <string name="PaymentsHomeFragment__cant_display_currency_conversion">Währungsumrechnung kann nicht angezeigt werden. Überprüfe die Internetverbindung deines Telefons und versuche es erneut.</string>
   <string name="PaymentsHomeFragment__payments_is_not_available_in_your_region">Zahlungen sind in deiner Region nicht verfügbar.</string>
   <string name="PaymentsHomeFragment__could_not_enable_payments">Zahlungen konnten nicht aktiviert werden. Bitte versuche es später erneut.</string>
   <string name="PaymentsHomeFragment__deactivate_payments_question">Zahlungen deaktivieren?</string>
@@ -2877,12 +2874,34 @@ Schlüsselaustausch-Nachricht für eine ungültige Protokollversion empfangen</s
   <string name="PrivacySettingsFragment__blocked">Blockierte Nutzer</string>
   <string name="PrivacySettingsFragment__d_contacts">%1$d Nutzer</string>
   <string name="PrivacySettingsFragment__messaging">Nachrichtenübermittlung</string>
+  <string name="PrivacySettingsFragment__disappearing_messages">Verschwindende Nachrichten</string>
   <string name="PrivacySettingsFragment__app_security">App-Sicherheit</string>
   <string name="PrivacySettingsFragment__block_screenshots_in_the_recents_list_and_inside_the_app">Bildschirmfotos in der Anwendung und der Liste der letzten Anwendungen blockieren</string>
   <string name="PrivacySettingsFragment__signal_message_and_calls">Signal-Nachrichten und -Anrufe, »Anrufe immer indirekt« und »Vertraulicher Absender«</string>
+  <string name="PrivacySettingsFragment__default_timer_for_new_changes">Standardzeit für neue Unterhaltungen</string>
+  <string name="PrivacySettingsFragment__set_a_default_disappearing_message_timer_for_all_new_chats_started_by_you">Lege eine Standardzeit für verschwindende Nachrichten für alle von dir begonnenen neuen Unterhaltungen fest.</string>
   <!--AdvancedPrivacySettingsFragment-->
   <string name="AdvancedPrivacySettingsFragment__show_status_icon">Statussymbol anzeigen</string>
   <string name="AdvancedPrivacySettingsFragment__show_an_icon">Symbol unter »Nachrichtendetails« anzeigen bei Nachrichten, die mittels »Vertraulicher Absender« zugestellt wurden</string>
+  <!--ExpireTimerSettingsFragment-->
+  <string name="ExpireTimerSettingsFragment__when_enabled_new_messages_sent_and_received_in_new_chats_started_by_you_will_disappear_after_they_have_been_seen">Wenn aktiviert, werden neue versendete und empfangene Nachrichten in von dir neu begonnenen Unterhaltungen nach dem Lesen verschwinden.</string>
+  <string name="ExpireTimerSettingsFragment__when_enabled_new_messages_sent_and_received_in_this_chat_will_disappear_after_they_have_been_seen">Wenn aktiviert, werden neue versendete und empfangene Nachrichten dieser Unterhaltung nach dem Lesen verschwinden.</string>
+  <string name="ExpireTimerSettingsFragment__off">Aus</string>
+  <string name="ExpireTimerSettingsFragment__4_weeks">4 Wochen</string>
+  <string name="ExpireTimerSettingsFragment__1_week">1 Woche</string>
+  <string name="ExpireTimerSettingsFragment__1_day">1 Tag</string>
+  <string name="ExpireTimerSettingsFragment__8_hours">8 Stunden</string>
+  <string name="ExpireTimerSettingsFragment__1_hour">1 Stunde</string>
+  <string name="ExpireTimerSettingsFragment__5_minutes">5 Minuten</string>
+  <string name="ExpireTimerSettingsFragment__30_seconds">30 Sekunden</string>
+  <string name="ExpireTimerSettingsFragment__custom_time">Personalisierte Zeit</string>
+  <string name="ExpireTimerSettingsFragment__set">Festlegen</string>
+  <string name="ExpireTimerSettingsFragment__save">Speichern</string>
+  <string name="CustomExpireTimerSelectorView__seconds">Sekunde(n)</string>
+  <string name="CustomExpireTimerSelectorView__minutes">Minute(n)</string>
+  <string name="CustomExpireTimerSelectorView__hours">Stunde(n)</string>
+  <string name="CustomExpireTimerSelectorView__days">Tag(e)</string>
+  <string name="CustomExpireTimerSelectorView__weeks">Woche(n)</string>
   <!--HelpSettingsFragment-->
   <string name="HelpSettingsFragment__support_center">Support-Center</string>
   <string name="HelpSettingsFragment__contact_us">Kontaktiere uns</string>
